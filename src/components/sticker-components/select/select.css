@@ -1,0 +1,46 @@
+.select {
+   position: relative;
+   color: #143550;
+	width: 188px;
+   z-index: 1;
+}
+.select.is-active .select__body {
+	display: block;
+}
+
+.select__header {
+	cursor: pointer;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.select__current {
+	font-size: 18px;
+	line-height: 24px;
+}
+.select__icon {
+	height: 40px;
+	width: 40px;
+   background-image: url(../../../img/custom-arrow//customArrow.svg);
+   background-repeat: no-repeat;
+   background-position: 50%;
+}
+
+.select__body {
+	border: 1px solid #cccccc;
+	/* display: none; */
+   position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+}
+.select__item {
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px;
+}
+
+.select__item:hover {
+	background-color: #f2f2f2;
+}

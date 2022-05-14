@@ -1,0 +1,6 @@
+.background{
+   padding: 16px 0;
+   background-image: url(../../img//background//background-first-page.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}

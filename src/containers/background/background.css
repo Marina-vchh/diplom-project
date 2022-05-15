@@ -1,6 +1,14 @@
 .background{
-   padding: 16px 0;
-   background-image: url(../../img//background//background-first-page.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+}
+
+.background-sticker{
+   padding: 0 16px 150px;
+   background-image: url(../../img//background//background-first-page.jpg);
+}
+
+.background-order{
+   padding: 0 16px 100px;
+   background-image: url(../../img//background//background-second-page.jpg);
 }

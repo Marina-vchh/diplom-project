@@ -1,13 +1,19 @@
 import React from "react";
 import Header from "../header/Header";
 import Title from "../../components/common-components/title/Title";
-import './background.css'
+import './background.css';
 
-const Background = () => {
+interface IBackground{
+   titleText: string;
+   titleTextClassname: string;
+   className: string;
+}
+
+const Background = ({titleText, className, titleTextClassname}: IBackground) => {
    return (
-      <div className="background">
+      <div className={className}>
          <Header />
-         <Title text="Create your own stickers" />
+         <Title text={titleText} className={titleTextClassname} />
       </div>
    )
 }

@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
   select, input {
     outline: none;
   }
+
+  a{
+    text-decoration: none;
+  }
 `;
 
 ReactDOM.render(

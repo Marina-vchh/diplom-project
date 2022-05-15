@@ -15,7 +15,7 @@ const SelectComponent = () => {
             <div className="select__item">Price, low to high</div>
             <div className="select__item">Price, high to low</div>
 	      </div>
-</div>
+      </div>
    );
 };
 

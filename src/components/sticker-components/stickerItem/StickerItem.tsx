@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../../common-components/button/Button";
 import './stickerItem.css';
-import OrderPage from '../../../pages/orderPage/OrderPage'
 import { Link } from 'react-router-dom';
 
 interface IStickerItem {
@@ -19,12 +18,11 @@ const StickerItem = ({ id, src, alt, name, price, className, onMouseEnter, onMou
    return(
       <li className="sticker-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
          <img src={src} alt={alt} className="sticker-item-img" />
-         <Button text={"Add to cart"} className={className}></Button>
+         <Link to='/orderPage'><Button text={"Add to cart"} className={className} /></Link>
          <div className="sticker-item__info">
             <div className="sticker-item__name">{name}</div> 
             <div className="sticker-item__price">${price}</div>
          </div>
-         <button><Link to='/orderPage'></Link></button>
       </li>
    )
 };

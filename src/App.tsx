@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
-import StickerPage from './pages/StickerPage';
+import { Navigate, Route, Routes } from "react-router-dom";
+import StickerPage from './pages/stickerPage/StickerPage';
+import OrderPage from './pages/orderPage/OrderPage';
 
 function App() {
   return (
-    <div className="App">
-      <StickerPage />
+    <div>
+        <StickerPage />
+        <OrderPage />
     </div>
   )
 }

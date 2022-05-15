@@ -31,11 +31,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-    <ThemeProvider theme={themes}>
-    <Provider store={store}>
-    <App />
-    <GlobalStyle />
-    </Provider>
-    </ThemeProvider>,
+    <BrowserRouter>
+      <ThemeProvider theme={themes}>
+        <Provider store={store}>
+          <App />
+          <GlobalStyle />
+        </Provider>
+      </ThemeProvider>
+    </BrowserRouter>,
     document.getElementById('root') as HTMLElement
 )

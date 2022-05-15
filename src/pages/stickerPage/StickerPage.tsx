@@ -1,8 +1,8 @@
 import React from "react";
 import '../containers/background/Background'
-import Background from "../containers/background/Background";
-import StickersField from "../containers/stickers/StickersField";
-import Footer from "../containers/footer/Footer";
+import Background from "../../containers/background/Background";
+import StickersField from "../../containers/stickers/StickersField";
+import Footer from "../../containers/footer/Footer";
 import './stickerPage.css';
 
 const StickerPage = () => {

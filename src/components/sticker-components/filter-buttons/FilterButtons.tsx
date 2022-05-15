@@ -3,13 +3,13 @@ import { IFilterButtons } from "../../../mock-data";
 import './filterButtons.css'
 
 interface IFilterButton {
-   buttons: IFilterButtons[],
-   className: string,
+   buttons: IFilterButtons[];
+   className: string;
    activeFilter: string;
    filterChange: (filter: string) => void;
-}
+};
 
-const FilterButtons = ({buttons, className, activeFilter, filterChange}: IFilterButton) => {
+const FilterButtons = ({ buttons, className, activeFilter, filterChange }: IFilterButton) => {
    return(
          <ul className={className}>
             {buttons.map(({id, value}) => (<button 

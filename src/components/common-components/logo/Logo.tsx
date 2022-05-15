@@ -7,7 +7,7 @@ const Logo = () => {
       <div>
          <ReactLogo />
       </div>
-   )
-}
+   );
+};
 
 export default Logo;

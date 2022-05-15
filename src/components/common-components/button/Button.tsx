@@ -6,7 +6,7 @@ interface IButton{
    className: string;
 }
 
-const Button = ({text, className}: IButton) => {
+const Button = ({ text, className }: IButton) => {
    return(
       <button className={className}>{text}</button>
    )

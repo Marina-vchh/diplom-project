@@ -7,7 +7,7 @@ const initialState = STICKERS;
 export const chooseReducer = (state = initialState, { type, payload }: TChooseActionTypes) => {
    switch (type) {
        case CHOOSE:
-         return state.filter(sticker => sticker.id !== payload.id);
+         return state.filter(sticker => sticker.id === payload.id);
        default:
            return state;
    }

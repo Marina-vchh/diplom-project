@@ -6,14 +6,15 @@ import './stickerItemList.css'
 interface IStickerItemList {
    stickersList: IStickers[];
    className: string;
-   onMouseEnter: () => void;
-   onMouseLeave: () => void;
+   onMouseEnter?: () => void;
+   onMouseLeave?: () => void;
+   chooseSticker?: (id: number) => void;
 }
 
-const StickerItemList = ({stickersList, className, onMouseEnter, onMouseLeave, }: IStickerItemList) => {
+const StickerItemList = ({stickersList, className, onMouseEnter, onMouseLeave, chooseSticker}: IStickerItemList) => {
    return(
       <ul className="sticker-item-list">
-         {stickersList.map(({id, src, alt, name, price}) => (<StickerItem id={id} key={id} src={src} alt={alt} name={name} price={price} className={className} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} />))}
+         {stickersList.map(({id, src, alt, name, price}) => (<StickerItem id={id} key={id} src={src} alt={alt} name={name} price={price} className={className} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} chooseSticker={chooseSticker} />))}
       </ul>
    )
 };

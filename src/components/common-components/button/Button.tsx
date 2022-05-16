@@ -4,6 +4,7 @@ import './button.css';
 interface IButton{
    text: string;
    className: string;
+   chooseSticker?: (id: number) => void;
 }
 
 const Button = ({ text, className }: IButton) => {

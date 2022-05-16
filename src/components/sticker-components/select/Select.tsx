@@ -1,6 +1,10 @@
 import React from 'react';
 import "./select.css";
 
+interface ISelect{
+   onClick: () => void;
+}
+
 const SelectComponent = () => {
    return(
       <div className="select is-active">

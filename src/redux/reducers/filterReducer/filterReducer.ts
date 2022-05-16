@@ -10,4 +10,4 @@ export const filtersReducer = (state = initialState, { type, payload }: TFilterA
         default:
             return state;
     }
-}
+};

@@ -1,7 +1,7 @@
 import React from "react";
 import './button.css';
 
-interface IButton{
+interface IButton {
    text: string;
    className: string;
    chooseSticker?: (id: number) => void;

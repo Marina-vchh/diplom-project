@@ -3,7 +3,7 @@ import Header from "../header/Header";
 import Title from "../../components/common-components/title/Title";
 import './background.css';
 
-interface IBackground{
+interface IBackground {
    titleText: string;
    titleTextClassname: string;
    className: string;

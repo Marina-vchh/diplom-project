@@ -1,7 +1,7 @@
 import React from 'react';
 import "./select.css";
 
-interface ISelect{
+interface ISelect {
    onClick: () => void;
 }
 
@@ -10,7 +10,7 @@ const SelectComponent = () => {
       <div className="select is-active">
 	      <div className="select__header">
 		      <span className="select__current">Sort By</span>
-		      <div className="select__icon"></div>
+		      <div className="select__icon" />
 	   </div>
 	      <div className="select__body">
             <div className="select__item">New products first</div>

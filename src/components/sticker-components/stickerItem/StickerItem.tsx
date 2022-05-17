@@ -22,10 +22,10 @@ const StickerItem = ({ id, src, alt, name, price, className, onMouseEnter, onMou
          <Heart className="heart" />
          <img src={src} alt={alt} className="sticker-item-img" />
          <Link to='/choosePage'>
-            <Button text={"Add to cart"} className={className} chooseSticker={chooseSticker}></Button>
+            <Button text={"Add to cart"} className={className} chooseSticker={chooseSticker} />
          </Link>
          <div className="sticker-item__info">
-            <div className="sticker-item__name">{name}</div> 
+            <div className="sticker-item__name">{name}</div>
             <div className="sticker-item__price">${price}</div>
          </div>
       </li>

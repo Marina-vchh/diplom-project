@@ -50,7 +50,7 @@ const StickersField = () => {
   const filteredStickers = useMemo(() => filterStickers(STICKERS), [STICKERS, filterStickers]);
    
    return(
-      <div className="stickersField">
+      <div className="stickers-field">
          <div className="filter-select-group">
             <FilterButtons className="filter-buttons" buttons={FILTERBUTTONS} activeFilter={filter} filterChange={dispatchedFilterChange}  />
             <Select />

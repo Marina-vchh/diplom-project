@@ -1,8 +1,7 @@
 import React from "react";
 import './icon.css'
 
-
-interface IIcon{
+interface IIcon {
    children: React.ReactNode;
 };
 

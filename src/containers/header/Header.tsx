@@ -12,9 +12,9 @@ const Header = () => {
          <Logo />
          <div className="icons">
             <Icon> 
-               <Icon1 className="icon-item"></Icon1>
-               <Icon2 className="icon-item"></Icon2>
-               <Icon3 className="icon-item"></Icon3>
+               <Icon1 className="icon-item" />
+               <Icon2 className="icon-item" />
+               <Icon3 className="icon-item" />
             </Icon>
          </div>
       </div>

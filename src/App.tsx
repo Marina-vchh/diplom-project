@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from './components/common-components/layout/Layout';
 import StickerPage from './pages/stickerPage/StickerPage';
 import ChoosePage from './pages/choosePage/ChoosePage';
 
 function App() {
   return (
-    <div>
     <Routes>
-        <Route path='/' element={<StickerPage />}></Route>
-        <Route path='/choosePage' element={<ChoosePage />}></Route>
+        <Route path='/' element={<StickerPage />} />
+        <Route path='/choosePage' element={<ChoosePage />} />
         <Route element={<Layout />}>
         <Route path='/' element={<Navigate replace to="/stickerPage" />} />
               <Route path='/stickerPage' element={<StickerPage />} />
@@ -17,7 +16,6 @@ function App() {
               <Route path='/page3' element={<Page3 />} /> */}
         </Route>
     </Routes>
-    </div>
   )
 }
 

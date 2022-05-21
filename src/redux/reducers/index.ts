@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { filtersReducer } from './filterReducer/filterReducer';
-import { chooseReducer } from './chooseReducer/chooseReducer';
+import { counterReducer } from './counterReducers/counterReducer';
 
 const rootReducer = combineReducers({
    filter: filtersReducer,
-   choose: chooseReducer,
+   counter: counterReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

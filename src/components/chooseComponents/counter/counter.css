@@ -1,0 +1,20 @@
+.counter{
+   display: flex;
+   align-items: center;
+}
+
+.button-counter{
+   padding: 10px 15px;
+   border: none;
+   color: #143550;
+   border-top: 1px solid #143550;
+   border-bottom: 1px solid #143550;
+   background-color: transparent;
+}
+
+.count{
+   padding: 8px 15px;
+   font-weight: 600;
+   color: #fff;
+   background-color: #143550;
+}

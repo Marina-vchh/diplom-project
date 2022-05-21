@@ -12,7 +12,7 @@ const Layout = () => {
                         Home
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to="/page2">
 
                     </NavLink>
@@ -20,7 +20,7 @@ const Layout = () => {
                 <li>
                     <NavLink to="/page3">
                     </NavLink>
-                </li>
+                </li> */}
             </ul>
             <Outlet />
         </>

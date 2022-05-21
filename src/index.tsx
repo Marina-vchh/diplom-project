@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import { themes } from './styled-components/themes';
-import { COLOR } from './styled-components/color-constants';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from './redux/store/store';

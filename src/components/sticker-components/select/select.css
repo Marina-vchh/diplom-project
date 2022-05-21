@@ -18,7 +18,7 @@
 	font-size: 18px;
 	line-height: 24px;
 }
-.select__icon {
+.select__icon__up {
 	height: 40px;
 	width: 40px;
    background-image: url(../../../img/custom-arrow//customArrow.svg);
@@ -26,10 +26,19 @@
    background-position: 50%;
 }
 
-.select__body {
+.select__icon__down {
+	height: 40px;
+	width: 40px;
+	transform: rotate(180deg);
+   background-image: url(../../../img/custom-arrow//customArrow.svg);
+   background-repeat: no-repeat;
+   background-position: 50%;
+}
+
+
+.select-body {
 	border: 1px solid #cccccc;
 	background-color: #fff;
-	/* display: none; */
    position: absolute;
 	left: 0;
 	right: 0;

@@ -2,17 +2,19 @@ import React from 'react';
 import "./select.css";
 
 interface ISelect {
-   onClick: () => void;
+   classNameSelect: string;
+   classNameArrow: string;
+   handleSelectActive: () => void;
 }
 
-const SelectComponent = () => {
+const SelectComponent = ({classNameSelect, classNameArrow, handleSelectActive}: ISelect) => {
    return(
       <div className="select is-active">
-	      <div className="select__header">
+	      <div className="select__header" onClick={handleSelectActive}>
 		      <span className="select__current">Sort By</span>
-		      <div className="select__icon" />
-	   </div>
-	      <div className="select__body">
+		      <div className={classNameArrow} />
+	      </div>
+	      <div className={classNameSelect}>
             <div className="select__item">New products first</div>
             <div className="select__item">Name, A to Z</div>
             <div className="select__item">Name, Z to A</div>

@@ -4,12 +4,13 @@ import './button.css';
 interface IButton {
    text: string;
    className: string;
-   chooseSticker?: (id: number) => void;
+   children?: React.ReactChild
 }
 
-const Button = ({ text, className }: IButton) => {
+const Button = ({ text, className, children}: IButton) => {
    return(
-      <button className={className}>{text}</button>
+      <button className={className}>{text}
+      {children}</button>
    )
 };
 

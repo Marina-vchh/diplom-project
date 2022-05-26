@@ -4,12 +4,13 @@ import './button.css';
 interface IButton {
    text: string;
    className: string;
-   children?: React.ReactChild
+   children?: React.ReactNode;
+   onClick?: () => void;
 }
 
-const Button = ({ text, className, children}: IButton) => {
+const Button = ({ text, className, children, onClick}: IButton) => {
    return(
-      <button className={className}>{text}
+      <button onClick={onClick} className={className}>{text}
       {children}</button>
    )
 };

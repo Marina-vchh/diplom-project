@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <Routes>
-        <Route path= "*" element={<StickerPage />} />
-        <Route element={<Layout />}>
+        <Route path= "/" element={<StickerPage />} />
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<Navigate replace to="/stickerPage" />} />
           <Route path="/stickerPage" element={<StickerPage />} />
           <Route path="/choosePage/:id" element={<ChoosePage />} />

@@ -1,9 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/common-components/button/Button";
 import Counter from "../counter/Counter";
 import "./cart.css"
 
 const Cart = () => {
+   const navigate = useNavigate();
+
+   const goHome = () => navigate('/', {replace: true});
+
    return(
       <div className="cart">
          <table className="table">
@@ -16,7 +21,7 @@ const Cart = () => {
             <tr>
             </tr>
          </table>
-         <Button text="Continue shopping" className="button cart-button" />
+         <Button onClick={goHome} text="Continue shopping" className="button cart-button" />
        </div>
    )
 };

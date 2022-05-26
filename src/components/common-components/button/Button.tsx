@@ -5,13 +5,19 @@ interface IButton {
    text: string;
    className: string;
    children?: React.ReactNode;
-   onClick?: () => void;
+   disabled?: boolean;
+   onClick?: (e:React.MouseEvent<HTMLButtonElement> ) => void;
 }
 
-const Button = ({ text, className, children, onClick}: IButton) => {
+const Button = ({ text, className, children, disabled, onClick }: IButton) => {
    return(
-      <button onClick={onClick} className={className}>{text}
-      {children}</button>
+      <button 
+         disabled={disabled}
+         className={className}
+         onClick={onClick}>
+            {text}
+            {children}
+      </button>
    )
 };
 

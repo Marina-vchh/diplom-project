@@ -11,7 +11,7 @@ import OrderBlock from "../../containers/order-block/OrderBlock";
 
 const CartPage = () => {
    return (
-      <div className="sticker-page">
+      <div className="cart-page">
          <Background titleText="Cart" className="background background-cart" titleTextClassname=""/>
          <Cart />
          <OrderBlock text="Cart Totals" />

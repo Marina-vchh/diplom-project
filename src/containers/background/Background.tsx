@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
-import Title from "../../components/common-components/title/Title";
+import TitleMain from "../../components/common-components/title-main/TitleMain";
 import './background.css';
 
 interface IBackground {
@@ -13,7 +13,7 @@ const Background = ({titleText, className, titleTextClassname}: IBackground) => 
    return (
       <div className={className}>
          <Header />
-         <Title text={titleText} className={titleTextClassname} />
+         <TitleMain text={titleText} className={titleTextClassname} />
       </div>
    )
 }

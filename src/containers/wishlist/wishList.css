@@ -1,0 +1,9 @@
+.table{
+   max-width: 926px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+td{
+   text-align: center;
+}

@@ -1,0 +1,10 @@
+.sticker-choose{
+   padding: 50px 100px;
+   max-width: 788px;
+   width: 100%;
+}
+
+.counter-button-group{
+   display: flex;
+   justify-content: space-between;
+}

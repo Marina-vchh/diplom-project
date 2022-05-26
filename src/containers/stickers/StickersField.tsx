@@ -1,19 +1,28 @@
-import React, {useEffect, useState, useCallback, useMemo, } from "react";
+import React, {useEffect, useState, useCallback, useMemo } from "react";
+import { NavLink, Routes, Route, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import FilterButtons from "../../components/sticker-components/filter-buttons/FilterButtons";
 import Select from "../../components/sticker-components/select/Select";
-import StickerItemList from "../../components/sticker-components/stickerItemsList/StickerItemList";
+import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
 import { FILTERBUTTONS, STICKERS, IStickers } from "../../mock-data";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
 import Button from "../../components/common-components/button/Button";
+import ChoosePage from "../../pages/choosePage/ChoosePage";
+import StickersChoose from "../stickersChoose/StickersChoose";
 import './stickersField.css';
+import StickerPage from "../../pages/stickerPage/StickerPage"
+interface IPosts {
+   data: any;
+}
 
-
-
-const StickersField = () => {
+export const StickersField = ({ data: { data } }: IPosts) => {
    const [isHovering, setIsHovering] = useState(false);
    const [isActiveSelect, setIsActiveSelect] = useState(false);
+
+   const newStickersArr = data.splice(0, 9).map((item: any, index: any) => {
+      return {...item, ...STICKERS[index]};
+   })
 
    const filter = useSelector(filtersSelector);
 
@@ -43,15 +52,15 @@ const StickersField = () => {
       }
   }, [filter, STICKERS]);
 
-  const filteredStickers = useMemo(() => filterStickers(STICKERS), [STICKERS, filterStickers]);
+   const filteredStickers = useMemo(() => filterStickers(newStickersArr), [newStickersArr, filterStickers]);
 
-  const handleSelectActive = () => {
+   const handleSelectActive = () => {
      if(!isActiveSelect){
          setIsActiveSelect(true)
      } else {
         setIsActiveSelect(false)
      }
-  }
+   };
     
    return(
       <div className="stickers-field">
@@ -59,10 +68,31 @@ const StickersField = () => {
             <FilterButtons className="filter-buttons" buttons={FILTERBUTTONS} activeFilter={filter} filterChange={dispatchedFilterChange}  />
             <Select handleSelectActive={handleSelectActive} classNameSelect={isActiveSelect ? 'select-body' : 'hidden'} classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'} />
          </div>
-         <StickerItemList stickersList={filteredStickers} className={isHovering ? 'button filled-background sticker-item-button' : 'hidden'} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}/>
-         <Button text="All stickers" className="button transparent-background" /> 
-      </div>
+         <ul className="sticker-item-list">
+            {
+               filteredStickers.map((item: any) => {
+                     return( 
+                        <NavLink key={item.id} to={`/choosePage/${item.id}`}>
+                           <StickerItem src={item.src} alt={item.alt} name={item.name} price={item.price} className="button filled-background sticker-item-button"/>
+                        </NavLink>
+                  )
+               })
+            }
+         </ul>
+         <div>
+            <Routes>
+               { 
+                  filteredStickers.map((item: any) => {
+                     return <Route key={item.id} path={`${item.id}`} element={<p>{item.name}</p>} />
+                  })
+                }
+            </Routes>
+         </div>
+            <Button text="All stickers" className="button transparent-background"/> 
+         </div>
    )
 };
 
 export default StickersField;
+
+// {isHovering ? 'button filled-background sticker-item-button' : 'hidden'} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}

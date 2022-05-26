@@ -1,0 +1,17 @@
+.input-wrapper{
+   display: flex;
+}
+
+.input{
+   display: block;
+   margin-bottom: 10px;
+   max-width: 320px;
+   width: 100%;
+   font-size: 18px;
+   padding: 10px;
+   outline: none;
+   color: #143550;
+   border: 1px solid #C1C4C6;
+   border-radius: 10px;
+}
+

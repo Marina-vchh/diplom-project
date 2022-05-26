@@ -1,20 +1,18 @@
-.title-wrapper{
-   max-width: 443px;
-   width: 100%;
-   margin: 0 auto;
-   padding: 0 15px;
+.title-thin{
+   font-weight: 400;
+   font-size: 24px;
+   color: #30404D;
 }
 
-.title-wrapper-sticker{
-   border: 1px solid #143550;
+.title-thumbnail{
+   font-size: 24px;
+   color: #30404D;
 }
 
-.title{
-   text-align: center;
-   width: 200px;
-   margin: 0 auto;
-   font-size: 36px;
+.title-footer{
+   display: block;
+   text-align: right;
    font-weight: 600;
-   font-family: 'Open Sans', sans-serif;
-   color: #143550;
+   font-size: 14px;
+   color: #30404D;
 }

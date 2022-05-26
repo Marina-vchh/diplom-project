@@ -17,3 +17,13 @@
    padding: 0 16px 100px;
    background-image: url(../../img//background//background-wishlist.jpg);
 }
+
+.background-cart{
+   padding: 0 16px 100px;
+   background-image: url(../../img/background/background-cart.jpg);
+}
+
+.background-checkout{
+   padding: 0 16px 100px;
+   background-image: url(../../img/background/background-checkout.jpg);
+}

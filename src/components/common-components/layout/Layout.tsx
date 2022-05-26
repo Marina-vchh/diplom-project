@@ -8,19 +8,20 @@ const Layout = () => {
         <>
             <ul>
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'hidden' : 'not-active' } to="/stickerPage">
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
                         Home
                     </NavLink>
                 </li>
                 {/* <li>
-                    <NavLink to="/page2">
-
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/page3">
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/choosePage">
+                        choose
                     </NavLink>
                 </li> */}
+                <li>
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/wishListPage">
+                        WishList
+                    </NavLink>
+                </li>
             </ul>
             <Outlet />
         </>

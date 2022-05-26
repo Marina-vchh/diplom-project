@@ -1,17 +1,16 @@
 import React from "react";
-import './title.css'
+import "./title.css";
 
-interface IProps {
+interface ITitle {
    text: string;
    className: string;
 };
 
-const Title = ({ text, className }: IProps) => {
-   return (
-      <div className={className}>
-         <h1 className="title">{text}</h1>
-      </div>
-   );
+const Title = ({ text, className }: ITitle) => {
+
+   return(
+      <h2 className={className}>{text}</h2>
+   )
 };
 
 export default Title;

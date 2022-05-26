@@ -1,0 +1,20 @@
+.body{
+   width: 100%;
+   max-width: 500px;
+   padding: 0 0 40px 250px ;
+}
+
+.wrapper{
+   margin-bottom: 30px;
+}
+
+.label{
+   width: 73px;
+   margin-right: 30px;
+   font-size: 14px;
+   color: #143550;
+}
+
+.submit{
+   width: 100%;
+}

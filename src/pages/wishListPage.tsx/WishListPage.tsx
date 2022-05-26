@@ -4,10 +4,10 @@ import WishList from "../../containers/wishlist/WishList";
 
 const WishListPage = () => {
    return(
-      <>
+      <div>
          <Background titleText="Wishlist" className="background background-wishlist" titleTextClassname=''/>
          <WishList />
-      </>
+      </div>
    )
 };
 

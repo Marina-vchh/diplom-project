@@ -17,7 +17,9 @@ const Header = () => {
                <Link to="/wishlistPage">
                   <Icon2 className="icon-item" />
                </Link>
-               <Icon3 className="icon-item" />
+               <Link to="/cartPage">
+                  <Icon3 className="icon-item" />
+               </Link>
             </Icon>
          </div>
       </div>

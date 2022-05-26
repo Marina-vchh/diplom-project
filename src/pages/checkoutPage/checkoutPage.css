@@ -1,0 +1,10 @@
+.container{
+   display: flex;
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.orderBlock-block{
+   background-color: #e1e1e1;
+}

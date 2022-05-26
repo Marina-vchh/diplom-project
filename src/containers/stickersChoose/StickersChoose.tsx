@@ -19,7 +19,7 @@ const StickersChoose = ({ data }: { data: any }) => {
          <Title text="Quantity" className="title-thin" />
          <div className="counter-button-group">       
             <Counter />
-            <NavLink to={"/wishListPage"}>
+            <NavLink to={"/cartPage"}>
                <Button text="Add to cart" className="button filled-background" />
             </NavLink>
          </div>

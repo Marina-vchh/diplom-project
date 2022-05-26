@@ -5,6 +5,8 @@ import Cart from "../../containers/cart/Cart";
 import './cartPage.css';
 import { Routes, Route, NavLink, Link } from "react-router-dom";
 import Layout from "../../components/common-components/layout/Layout";
+import Button from "../../components/common-components/button/Button";
+import OrderBlock from "../../containers/order-block/OrderBlock";
 
 
 const CartPage = () => {
@@ -12,6 +14,10 @@ const CartPage = () => {
       <div className="sticker-page">
          <Background titleText="Cart" className="background background-cart" titleTextClassname=""/>
          <Cart />
+         <OrderBlock text="Cart Totals" />
+         <Link to={"/checkoutPage"}>
+            <Button text="Proceed to checkout" className="button filled-background cart-block-button" />
+         </Link>
          <Footer />
       </div>
    )

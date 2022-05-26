@@ -18,6 +18,7 @@ function App() {
           <Route path="/choosePage/:id" element={<ChoosePage />} />
           <Route path="/wishListPage" element={<WishListPage />} />
           <Route path="/cartPage" element={<CartPage />} />
+          <Route path="/checkoutPage" element={<CheckoutPage />} />
         </Route>
     </Routes>
     </>

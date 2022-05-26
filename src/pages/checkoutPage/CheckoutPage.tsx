@@ -1,16 +1,20 @@
 import React from "react";
 import Background from "../../containers/background/Background";
 import Layout from "../../components/common-components/layout/Layout";
+import OrderBlock from "../../containers/order-block/OrderBlock";
 import Form from "../../containers/form/Form";
 import Footer from "../../containers/footer/Footer";
-import './checkout.css';
+import './checkoutPage.css';
 
 const CheckoutPage = () => {
    return(
       <>
          <Background titleText="Checkout" className="background background-checkout" titleTextClassname=""/>
          <Layout />
-         <Form />
+         <div className="container">
+            <Form />
+            <OrderBlock text="Your Order" />
+         </div>
          <Footer />
       </>
    )

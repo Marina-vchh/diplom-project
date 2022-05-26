@@ -14,7 +14,7 @@ const WishList = () => {
    const goHome = () => navigate('/', {replace: true});
 
    return(
-      <div className="wishList">
+      <div className="wish-list">
          <table className="table">
          <tr>
             <th>

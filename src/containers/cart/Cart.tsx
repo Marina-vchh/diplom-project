@@ -21,7 +21,7 @@ const Cart = () => {
             <tr>
             </tr>
          </table>
-         <Button onClick={goHome} text="Continue shopping" className="button cart-button" />
+         <Button onClick={goHome} text="Continue shopping" className="button transparent-background cart-button" />
        </div>
    )
 };

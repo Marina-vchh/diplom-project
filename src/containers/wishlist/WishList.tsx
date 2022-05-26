@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../components/common-components/button/Button";
-import Counter from "../../components/choose-components/counter/Counter";
+import Counter from "../counter/Counter";
 import "./wishList.css";
 
 interface IWishList {
@@ -19,15 +19,11 @@ const WishList = () => {
            Price
          </th>
          <th>
-            Quantity
-         </th>
-         <th>
-            Total
+            Stock status
          </th>
          </tr>
-         <tr><td><Counter /></td></tr>
        </table>
-      <Button text="Continue shopping" className="button" />
+      <Button text="All stickers" className="button" />
       </div>
    )
 }

@@ -17,7 +17,7 @@ function App() {
           <Route path="/stickerPage" element={<StickerPage />} />
           <Route path="/choosePage/:id" element={<ChoosePage />} />
           <Route path="/wishListPage" element={<WishListPage />} />
-          <Route path="/cartPage" element={<CartPage />}></Route>
+          <Route path="/cartPage" element={<CartPage />} />
         </Route>
     </Routes>
     </>

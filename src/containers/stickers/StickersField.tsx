@@ -83,7 +83,7 @@ export const StickersField = ({ data: { data } }: IPosts) => {
             <Routes>
                { 
                   filteredStickers.map((item: any) => {
-                     return <Route key={item.id} path={`${item.id}`} element={<p>{item.name}</p>} />
+                     return <Route key={item.id} path={`${item.id}`} element={<StickersChoose data={item} />} />
                   })
                 }
             </Routes>

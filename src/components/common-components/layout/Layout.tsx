@@ -12,11 +12,6 @@ const Layout = () => {
                         Home
                     </NavLink>
                 </li>
-                {/* <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/choosePage">
-                        choose
-                    </NavLink>
-                </li> */}
                 <li>
                     <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/wishListPage">
                         WishList

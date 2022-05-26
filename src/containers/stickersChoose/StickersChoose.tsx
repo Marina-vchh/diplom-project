@@ -15,8 +15,9 @@ import './stickerChoose.css';
 const StickersChoose = ({ data }: { data: any }) => {
    return(
       <div className="sticker-choose">
+         <p>{data.id}</p>
          <Title text="Quantity" className="title-thin" />
-         <div className="counter-button-group">        
+         <div className="counter-button-group">       
             <Counter />
             <NavLink to={"/wishListPage"}>
                <Button text="Add to cart" className="button filled-background" />

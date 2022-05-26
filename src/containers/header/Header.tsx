@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Icon from "../../components/common-components/icon/Icon";
 import Logo from "../../components/common-components/logo/Logo";
 import {ReactComponent as Icon1} from "../../img/header-icons/header-icon1.svg";
@@ -13,7 +14,9 @@ const Header = () => {
          <div className="icons">
             <Icon> 
                <Icon1 className="icon-item" />
-               <Icon2 className="icon-item" />
+               <Link to="/wishlistPage">
+                  <Icon2 className="icon-item" />
+               </Link>
                <Icon3 className="icon-item" />
             </Icon>
          </div>

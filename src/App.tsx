@@ -15,8 +15,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate replace to="/stickerPage" />} />
           <Route path="/stickerPage" element={<StickerPage />} />
-          <Route path="/wishListPage" element={<WishListPage />} />
           <Route path="/choosePage/:id" element={<ChoosePage />} />
+          <Route path="/wishListPage" element={<WishListPage />} />
         </Route>
     </Routes>
     </>

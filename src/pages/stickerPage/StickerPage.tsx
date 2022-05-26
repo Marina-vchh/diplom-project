@@ -14,7 +14,7 @@ interface IPreloaderState {
 
 
 const StickerPage = () => {
-   const [data, setData] = useState<IPreloaderState | null>(null);
+    const [data, setData] = useState<IPreloaderState | null>(null);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')

@@ -1,0 +1,9 @@
+.sticker-item-list{
+   display: grid;
+   padding: 0 20px;
+   margin-bottom: 40px;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   row-gap: 40px;
+}
+

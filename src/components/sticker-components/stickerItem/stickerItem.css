@@ -1,12 +1,3 @@
-.sticker-item-list{
-   display: grid;
-   padding: 0 20px;
-   margin-bottom: 40px;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr;
-   row-gap: 40px;
-}
-
 .sticker-item{
    position: relative;
    padding: 20px;
@@ -48,19 +39,24 @@
    color: #DB2C6F;
 }
 
-.heart {
+.button-like {
+   display: block;
+   width: 24px;
+   height: 24px;
+   padding: 10px;
+   border: none;
    position: absolute;
-   right: 20px;
-   top: 20px;
+   right: 40px;
+   top: 40px;
+   background-image: url(../../../img//heart//heart.svg);
+   background-color: transparent;
    transition: all .3s linear;
 }
 
-.heart:hover {
-   width: 30px;
-   height: 30px;
+.button-item:hover {
+   background-image: url(../../../img//heart/heart-hover.svg);
 }
 
-.heart:active {
-   width: 35px;
-   height: 35px;
+.button-active {
+   background-image: url(../../../img//heart//heart-active.svg);
 }

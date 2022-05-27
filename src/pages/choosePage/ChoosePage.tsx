@@ -4,7 +4,7 @@ import Background from "../../containers/background/Background";
 import { IStickers, STICKERS } from "../../mock-data";
 import { Link } from "react-router-dom";
 import './choosePage.css'
-import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
+import StickerItem from "../../components/sticker-components/stickerItemList/StickerItemList";
 import Footer from "../../containers/footer/Footer";
 import { LinksComponentChoose } from "../../components/common-components/LinksComponent/LinksComponentChoose";
 import RelatedStickers from "../../containers/relatedStickers/RelatedStickers";

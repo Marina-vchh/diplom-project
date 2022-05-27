@@ -3,18 +3,19 @@ import { NavLink, Routes, Route, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import FilterButtons from "../../components/sticker-components/filter-buttons/FilterButtons";
 import Select from "../../components/sticker-components/select/Select";
-import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
+import StickerItem from "../../components/sticker-components/stickerItemList/StickerItemList";
 import { FILTERBUTTONS, STICKERS, IStickers } from "../../mock-data";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
-import { setLikesArray } from "../../redux/actions/likedActionsCreators/likedActionsCreators";
+import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
-import { LikeSelector } from "../../redux/selectors/like-selectors/like-selector";
 import Button from "../../components/common-components/button/Button";
 import ChoosePage from "../../pages/choosePage/ChoosePage";
 import StickersChoose from "../stickersChoose/StickersChoose";
 import './stickersField.css';
 import StickerPage from "../../pages/stickerPage/StickerPage";
-import {sortPriceLowToHigh} from "../../redux/actions/sortActionCreators/sortActionCreators"
+import {sortPriceLowToHigh} from "../../redux/actions/sortActionCreators/sortActionCreators";
+import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector"
 
 interface IPosts {
    data: any;
@@ -29,25 +30,28 @@ interface IPosts {
 //    src: string;
 // };
 
-const StickersField = ({data: {data}}: IPosts) => {
-   const [isHovering, setIsHovering] = useState(false);
+const StickersField = () => {
+   // const [isHovering, setIsHovering] = useState(false);
    const [isActiveSelect, setIsActiveSelect] = useState(false);
 
-   const stickerItems = data.splice(0, 9).map((item: any, index: any) => {
-      return {...item, ...STICKERS[index]};
-   });
+   // const stickerItems = data.splice(0, 9).map((item: any, index: any) => {
+   //    return {...item, ...STICKERS[index]};
+   // });
 
    const filter = useSelector(filtersSelector);
+   const sticker = useSelector(StickerSelector);
+
+   console.log(sticker)
 
    const dispatch = useDispatch();
 
-   const dispatchedSortArray = useCallback(
-      () => dispatch(sortPriceLowToHigh()),
+   const dispatchedSetLikesArray = useCallback(
+      (id: number) => dispatch(like(id)),
       [dispatch]
   );
 
-   const dispatchedSetLikesArray = useCallback(
-      (id: number) => dispatch(setLikesArray(id)),
+   const dispatchedSortArray = useCallback(
+      () => dispatch(sortPriceLowToHigh()),
       [dispatch]
   );
 
@@ -75,7 +79,7 @@ const StickersField = ({data: {data}}: IPosts) => {
       }
   }, [filter, STICKERS]);
 
-   const filteredStickers = useMemo(() => filterStickers(stickerItems), [stickerItems, filterStickers]);
+   const filteredStickers = useMemo(() => filterStickers(STICKERS), [STICKERS, filterStickers]);
 
    const handleSelectActive = () => {
      if(!isActiveSelect){
@@ -84,8 +88,6 @@ const StickersField = ({data: {data}}: IPosts) => {
         setIsActiveSelect(false)
      }
    };
-
-   console.log(data)
 
    // const sortStickersLTH = (stickers: INewArr[]) => {
    //    let result = stickers.sort(function(a,b):any{
@@ -116,7 +118,7 @@ const StickersField = ({data: {data}}: IPosts) => {
                     classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'} />
          </div>
          <div>  
-            <StickerItem data={filteredStickers}></StickerItem>
+            <StickerItemList data={STICKERS} setLikesArray={dispatchedSetLikesArray} />
          </div>
             <Button text="All stickers" className="button transparent-background"/> 
          </div>

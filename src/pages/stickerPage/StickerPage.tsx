@@ -17,24 +17,24 @@ interface IResult {
  };
 
 const StickerPage = () => {
-    const [data, setData] = useState<IPreloaderState | null>(null);
+    // const [data, setData] = useState<IPreloaderState | null>(null);
 
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.json())
-            .then(data => updateState(data));
+    // useEffect(() => {
+    //     fetch('https://jsonplaceholder.typicode.com/posts')
+    //         .then(response => response.json())
+    //         .then(data => updateState(data));
 
-        const updateState = (data: IPreloaderState[keyof IPreloaderState]) => {
-            window.setTimeout(() => {
-                setData({ data })
-            }, 1000);
-        }
-    }, []);
+    //     const updateState = (data: IPreloaderState[keyof IPreloaderState]) => {
+    //         window.setTimeout(() => {
+    //             setData({ data })
+    //         }, 1000);
+    //     }
+    // }, []);
 
    return (
       <div className="sticker-page">
          <Background titleText="Create your own app" className="background background-sticker" titleTextClassname="title-main title-main-stickers"/>
-         <LinksComponentSticker data={data}/>
+         <StickersField/>
          <Footer />
       </div>
    )

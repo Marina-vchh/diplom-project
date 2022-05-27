@@ -9,7 +9,7 @@ interface ILikeAction {
 
 export type TLikeActionTypes = ILikeAction;
 
-export const setLikesArray = (id: number): TLikeActionTypes => {
+export const like = (id: number): TLikeActionTypes => {
     return {
         type: LIKE,
         payload: {

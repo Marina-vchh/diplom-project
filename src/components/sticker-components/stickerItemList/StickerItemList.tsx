@@ -9,13 +9,14 @@ import './stickerItemList.css';
 
 interface IPosts {
    data: IStickers[];
+   className: string;
    setLikesArray: (id: number) => void;
 }
 
-const StickerItemList = ({data, setLikesArray}: IPosts) => {
+const StickerItemList = ({data, className, setLikesArray}: IPosts) => {
    return(
       <div>
-      <ul className="sticker-item-list">
+      <ul className={className}>
          {data.map(({id, src, alt, name, price, isLike}) => {
          return(
             <StickerItem id={id}
@@ -25,6 +26,7 @@ const StickerItemList = ({data, setLikesArray}: IPosts) => {
                          name={name} 
                          price={price} 
                          isLike={isLike} 
+                         className={className}
                          setLikesArray={setLikesArray} />
          )}
          )}

@@ -118,7 +118,7 @@ const StickersField = () => {
                     classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'} />
          </div>
          <div>  
-            <StickerItemList data={STICKERS} setLikesArray={dispatchedSetLikesArray} />
+            <StickerItemList data={STICKERS} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" />
          </div>
             <Button text="All stickers" className="button transparent-background"/> 
          </div>

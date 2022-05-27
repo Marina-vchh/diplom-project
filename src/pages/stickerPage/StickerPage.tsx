@@ -1,17 +1,20 @@
 import React, {useEffect, useState} from "react";
 import Background from "../../containers/background/Background";
-import StickersField from "../../containers/stickers/StickersField";
+import StickersField from "../../containers/stickersField/StickersField";
 import Footer from "../../containers/footer/Footer";
 import './stickerPage.css';
 import { IStickers, STICKERS } from "../../mock-data";
 import { Routes, Route, NavLink, Link } from "react-router-dom";
-import { LinksComponent } from "../../containers/LinksComponent/LinksComponent";
+import { LinksComponentSticker } from "../../components/common-components/LinksComponent/LinksComponentSticker";
 import Layout from "../../components/common-components/layout/Layout";
 
 interface IPreloaderState {
-   data: [];
-}
+   data: IResult[];
+};
 
+interface IResult {
+    name: string;
+ };
 
 const StickerPage = () => {
     const [data, setData] = useState<IPreloaderState | null>(null);
@@ -31,8 +34,7 @@ const StickerPage = () => {
    return (
       <div className="sticker-page">
          <Background titleText="Create your own app" className="background background-sticker" titleTextClassname="title-main title-main-stickers"/>
-         <Layout />
-         <LinksComponent data={data} />
+         <LinksComponentSticker data={data}/>
          <Footer />
       </div>
    )

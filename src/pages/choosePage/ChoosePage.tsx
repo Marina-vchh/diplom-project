@@ -4,11 +4,11 @@ import Background from "../../containers/background/Background";
 import { IStickers, STICKERS } from "../../mock-data";
 import { Link } from "react-router-dom";
 import './choosePage.css'
-import { LinksComponent } from "../../containers/LinksComponent/LinksComponent";
+import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
 import Footer from "../../containers/footer/Footer";
-import StickersChoose from "../../containers/stickersChoose/StickersChoose";
+import { LinksComponentChoose } from "../../components/common-components/LinksComponent/LinksComponentChoose";
 import RelatedStickers from "../../containers/relatedStickers/RelatedStickers";
-import StickersField from "../../containers/stickers/StickersField";
+import StickerChoose from "../../containers/stickersChoose/StickersChoose"
 
 interface IChooseStickers {
    data: any;
@@ -18,21 +18,22 @@ const ChoosePage = () => {
    const {id} = useParams();
    const [data, setData] = useState<IChooseStickers | null>(null);
 
-   useEffect(() => {
-      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-          .then(res => res.json())
-          .then(data => setData(data))
-  }, [id]);
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .then(response => response.json())
+            .then(data => updateState(data));
+
+        const updateState = (data: IChooseStickers[keyof IChooseStickers]) => {
+            window.setTimeout(() => {
+                setData({ data })
+            }, 1000);
+        }
+    }, [id]);
 
    return(
       <>
          <Background titleText="Shop" className="background background-choose" titleTextClassname="title-wrapper title-wrapper-order"/>
-         <StickersChoose data={id} />
-         {data && (
-                <>
-                    <h1>{data.id}</h1>
-                </>
-            )}
+         <LinksComponentChoose data={data} />
          <RelatedStickers />
          <Footer />
       </>

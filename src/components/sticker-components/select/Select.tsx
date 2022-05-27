@@ -1,10 +1,14 @@
 import React from 'react';
+import { IStickers, STICKERS } from '../../../mock-data';
+// import { INewArr } from '../../../containers/stickers/StickersField';
 import "./select.css";
 
 interface ISelect {
    classNameSelect: string;
    classNameArrow: string;
    handleSelectActive: () => void;
+   // sortStickersZtoA: (newStickersArr: INewArr[]) => INewArr[];
+   // sortStickersLTH: (stickers: INewArr[]) => INewArr[];
 }
 
 const SelectComponent = ({classNameSelect, classNameArrow, handleSelectActive}: ISelect) => {
@@ -15,10 +19,9 @@ const SelectComponent = ({classNameSelect, classNameArrow, handleSelectActive}: 
 		      <div className={classNameArrow} />
 	      </div>
 	      <div className={classNameSelect}>
-            <div className="select__item">New products first</div>
             <div className="select__item">Name, A to Z</div>
-            <div className="select__item">Name, Z to A</div>
-            <div className="select__item">Price, low to high</div>
+            <div className="select__item" >Name, Z to A</div>
+            <div className="select__item" >Price, low to high</div>
             <div className="select__item">Price, high to low</div>
 	      </div>
       </div>

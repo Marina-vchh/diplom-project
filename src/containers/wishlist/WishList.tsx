@@ -14,21 +14,15 @@ const WishList = () => {
    const goHome = () => navigate('/', {replace: true});
 
    return(
-      <div className="wish-list">
-         <table className="table">
-         <tr>
-            <th>
-           Product
-           </th>
-         <th>
-           Price
-         </th>
-         <th>
-            Stock status
-         </th>
-         </tr>
+      <div className="wishlist">
+         <table className="table-wishlist">
+            <tr className="table-wishlist__header">
+               <td> Product </td>
+               <td> Price </td>
+               <td> Stock status </td>
+            </tr>
        </table>
-      <Button text="All stickers" className="button wishList-button" onClick={goHome} />
+      <Button text="All stickers" className="button transparent-background wishList-button" onClick={goHome} />
       </div>
    )
 }

@@ -8,16 +8,33 @@ import Button from '../../components/common-components/button/Button';
 import './stickerChoose.css';
 
 
-// interface IChooseStickers {
-//    newStickersArr?: any;
-// }
+interface IChooseStickers {
+   data?: any;
+   array?: [];
+}
 
-const StickersChoose = ({ data }: { data: any }) => {
+interface IResult {
+   data: any;
+   name: string;
+   price: string;
+}
+
+
+
+const StickersChoose = ({data: {data}, array}: IChooseStickers) => {
+   const stickerItemData = [];
+   stickerItemData.push(data);
+   console.log(stickerItemData)
+   console.log(array)
+   
+   const stickerItem = stickerItemData.map((item: any, index: any) => {
+      return {...item, ...STICKERS[index]};
+   });
+
    return(
       <div className="sticker-choose">
-         <p>{data.id}</p>
          <Title text="Quantity" className="title-thin" />
-         <div className="counter-button-group">       
+         <div className="counter-button-group"> 
             <Counter />
             <NavLink to={"/cartPage"}>
                <Button text="Add to cart" className="button filled-background" />

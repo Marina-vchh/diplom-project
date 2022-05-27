@@ -15,7 +15,7 @@ const FilterButtons = ({ buttons, className, activeFilter, filterChange }: IFilt
             {buttons.map(({id, value}) => (<button 
             key={id} 
             className={id === activeFilter ? "filter-button active" : 'filter-button'}
-            onClick={() => filterChange(id)}> {value}
+            onClick={() => console.log(filterChange(id))}> {value}
             </button>))}
          </ul>
    );

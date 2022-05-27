@@ -1,0 +1,15 @@
+.wishlist {
+   padding: 50px 100px; 
+}
+
+.table-wishlist {
+   max-width: 926px;
+   width: 100%;
+   margin: 0 auto;
+   margin-bottom: 50px;
+}
+
+.table-wishlist__header{
+   border: 1px solid rgb(84, 84, 84);
+}
+

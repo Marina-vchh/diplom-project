@@ -1,11 +1,26 @@
+.sticker-item-list{
+   display: grid;
+   padding: 0 20px;
+   margin-bottom: 40px;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   row-gap: 40px;
+}
+
 .sticker-item{
    position: relative;
+   padding: 20px;
    margin: 0 auto;
    max-width: 288px;
    width: 100%;
    cursor: pointer;
    transition:  .3s all linear;
    background-color: transparent;
+}
+
+.sticker-item-img {
+   display: block;
+   margin: 0 auto;
 }
 
 .hidden{
@@ -33,8 +48,19 @@
    color: #DB2C6F;
 }
 
-.heart{
+.heart {
    position: absolute;
    right: 20px;
    top: 20px;
+   transition: all .3s linear;
+}
+
+.heart:hover {
+   width: 30px;
+   height: 30px;
+}
+
+.heart:active {
+   width: 35px;
+   height: 35px;
 }

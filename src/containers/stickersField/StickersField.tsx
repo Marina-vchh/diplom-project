@@ -109,9 +109,9 @@ const StickersField = () => {
                     sortStickers={sortStickers }/>
          </div>
          <div>  
-            <StickerItemList data={filteredStickers} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" classNameButton="button transparent-background" />
+            <StickerItemList data={filteredStickers} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" classNameButton="button transparent-background sticker-item-button" />
          </div>
-            <Button text="All stickers" className="button transparent-background sticker-field-button"/> 
+            <Button text="All stickers" className="button filled-background sticker-field-button"/> 
          </div>
    )
 };

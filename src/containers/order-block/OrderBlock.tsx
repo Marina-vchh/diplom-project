@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Title from "../../components/common-components/title/Title";
 import Button from "../../components/common-components/button/Button";
+import { counterSelector } from "../../redux/selectors/counter-selectors/counterSelectors";
 import "./orderBlock.css";
 
 interface IOrderBlock {
@@ -9,20 +11,24 @@ interface IOrderBlock {
 }
 
 const OrderBlock = ({ text }: IOrderBlock) => {
+   const count = useSelector(counterSelector);
    return(
       <div className="cart-block">
          <table>
             <tr>
                <Title text={text} className="title-thumbnail title-cart" />
             </tr>
-            <tr><td className="order-block__text">Subtotal</td></tr>
+            <tr>
+               <td className="order-block__text">Subtotal</td>
+               <td className="order-block__text">{count}</td>
+            </tr>
             <tr>
                <td className="order-block__text">Shipping</td>
                <td className="order-block__text">free</td>
             </tr>
             <tr>
                <td><Title text="Total" className="title-thumbnail title-cart-without__border" /></td>
-               <td>564456</td>
+               <td></td>
             </tr>
          </table>
       </div>

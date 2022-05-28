@@ -1,28 +1,30 @@
 import { NavLink, Outlet } from "react-router-dom";
+import Background from "../../../containers/background/Background";
 import React from "react";
-import './layout.css';
+import './/layouts.css';
 
+interface ILayout {
+}
 
-
-
-const Layout = () => {
+const LayoutCartPage = () => {
     return (
         <>
-            <ul>
+            <Background titleText="Cart" className="background background-cart" titleTextClassname=""/>
+            <ul className="layout">
                 <li>
                     <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
-                        Coffee
-                    </NavLink>
+                    <p className="active-link">
+                        Cart
+                    </p>
                 </li>
             </ul>
             <Outlet />
         </>
     )
-}
+};
 
-export default Layout;
+export default LayoutCartPage;

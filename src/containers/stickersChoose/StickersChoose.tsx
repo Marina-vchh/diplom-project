@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { STICKERS, IStickers } from "../../mock-data";
 import StickerItem from '../../components/sticker-components/stickerItem/StickerItem';
 import StickersCart from '../StickersCart/StickersCart';
@@ -7,7 +7,6 @@ import Counter from "../counter/Counter";
 import Title from '../../components/common-components/title/Title';
 import Button from '../../components/common-components/button/Button';
 import './stickerChoose.css';
-import Layout from '../../components/common-components/layout/Layout';
 
 
 interface IChooseStickers {
@@ -21,7 +20,6 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
    
    return(
       <div>
-         <Layout />
          <div className="sticker-choose">
             <div className="sticker-choose-img">
                {
@@ -41,9 +39,13 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
             <p className="sticker-choose-text">more information about stickers</p>  
             <Title text="Quantity" className="title-thin" />
             <Counter className="sticker-choose-counter" classNameCount="count-filled" classNameButton="sticker-choose-counter-button" />
-            <NavLink to={"/cartPage"}>
-               <Button text="Add to cart" className="button filled-background choose-button" />
-            </NavLink>
+            {chooseItem.map((item: any) => {
+               return(
+                  <Link key={item.id} to={`/cartPage/${item.id}`}>
+                     <Button text="Add to cart" className="button filled-background choose-button" />
+                  </Link>
+               )
+            })}
          </div>
       </div>
       <div>

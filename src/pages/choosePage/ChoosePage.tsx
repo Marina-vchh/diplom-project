@@ -30,7 +30,6 @@ const ChoosePage = () => {
 
    return(
       <>
-         <Background titleText="Shop" className="background background-choose" titleTextClassname="title-wrapper title-wrapper-order"/>
          <LinksComponentChoose data={data} />
          <RelatedStickers />
          <Footer />

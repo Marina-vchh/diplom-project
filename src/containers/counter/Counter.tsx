@@ -10,7 +10,7 @@ interface ICounter {
    classNameCount: string;
    classNameButton: string;
 }
-
+ 
 const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    const [disabled, setDisabled] = useState(false)
 

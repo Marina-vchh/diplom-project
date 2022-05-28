@@ -6,7 +6,6 @@ import './stickerPage.css';
 import { IStickers, STICKERS } from "../../mock-data";
 import { Routes, Route, NavLink, Link } from "react-router-dom";
 import { LinksComponentSticker } from "../../components/common-components/LinksComponent/LinksComponentSticker";
-import Layout from "../../components/common-components/layout/Layout";
 
 interface IPreloaderState {
    data: IResult[];

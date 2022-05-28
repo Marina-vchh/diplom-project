@@ -2,10 +2,9 @@ import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import Background from "../../containers/background/Background";
 import Footer from "../../containers/footer/Footer";
-import StickerCart from "../../containers/StickersCart/StickersCart";
+import { LinksComponentCart } from "../../components/common-components/LinksComponent/LinksComponentCart"
 import './cartPage.css';
 import { Routes, Route, NavLink, Link } from "react-router-dom";
-import Layout from "../../components/common-components/layout/Layout";
 import Button from "../../components/common-components/button/Button";
 import OrderBlock from "../../containers/order-block/OrderBlock";
 
@@ -27,10 +26,10 @@ const CartPage = () => {
                 setData({ data })
         }
     }, [id]);
+
    return (
       <div className="cart-page">
-         <Background titleText="Cart" className="background background-cart" titleTextClassname=""/>
-         <StickerCart data={data} />
+         <LinksComponentCart data={data} />
          <OrderBlock text="Cart Totals" />
          <Link to={"/checkoutPage"}>
             <Button text="Proceed to checkout" className="button filled-background cart-block-button" />

@@ -1,4 +1,4 @@
-import { LIKE } from "../../actions/actions";
+import { LIKE, REMOVE_STICKER } from "../../actions/actions";
 import { TLikeActionTypes } from "../../actions/stickersActionsCreators/stickersActionsCreators";
 import { STICKERS, IStickers } from "../../../mock-data";
 
@@ -8,7 +8,10 @@ export const stickerReducer = (state = initialState, { payload, type }: TLikeAct
     switch (type) {
         case LIKE:
             return state.map(sticker => ({ ...sticker, isLike: sticker.id === payload.id ? !sticker.isLike : sticker.isLike }));
+        case REMOVE_STICKER:
+            return state.filter(sticker => sticker.id !== payload.id);
         default:
             return state;
     }
+
 };

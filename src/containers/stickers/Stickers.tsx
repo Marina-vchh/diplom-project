@@ -1,42 +1,19 @@
 import React, {useEffect, useState, useCallback, useMemo } from "react";
-import { NavLink, Routes, Route, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import FilterButtons from "../../components/sticker-components/filter-buttons/FilterButtons";
 import Select from "../../components/sticker-components/select/Select";
-import StickerItem from "../../components/sticker-components/stickerItemList/StickerItemList";
 import { FILTERBUTTONS, STICKERS, IStickers } from "../../mock-data";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
 import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import Button from "../../components/common-components/button/Button";
-import ChoosePage from "../../pages/choosePage/ChoosePage";
-import StickersChoose from "../stickersChoose/StickersChoose";
-import './stickersField.css';
-import StickerPage from "../../pages/stickerPage/StickerPage";
-import {sortPriceLowToHigh} from "../../redux/actions/sortActionCreators/sortActionCreators";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
-import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector"
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
+import "./stickers.css"
 
-interface IPosts {
-   data: any;
-}
-// export interface INewArr {
-//    userId: number;
-//    id: number;
-//    title: string;
-//    body: string;
-//    name: string;
-//    price: number;
-//    src: string;
-// };
-
-const StickersField = () => {
+const Stickers = () => {
    // const [isHovering, setIsHovering] = useState(false);
    const [isActiveSelect, setIsActiveSelect] = useState(false);
-
-   // const stickerItems = data.splice(0, 9).map((item: any, index: any) => {
-   //    return {...item, ...STICKERS[index]};
-   // });
 
    const filter = useSelector(filtersSelector);
    const sticker = useSelector(StickerSelector);
@@ -47,11 +24,6 @@ const StickersField = () => {
 
    const dispatchedSetLikesArray = useCallback(
       (id: number) => dispatch(like(id)),
-      [dispatch]
-  );
-
-   const dispatchedSortArray = useCallback(
-      () => dispatch(sortPriceLowToHigh()),
       [dispatch]
   );
 
@@ -116,4 +88,4 @@ const StickersField = () => {
    )
 };
 
-export default StickersField;
+export default Stickers;

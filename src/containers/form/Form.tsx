@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Input from "../../components/checkout-components/input/Input";
+import Input from "../../components/common-components/input/Input";
 import Title from "../../components/common-components/title/Title";
 import Button from "../../components/common-components/button/Button";
 import './form.css'

@@ -9,7 +9,7 @@ interface IButton {
    onClick?: (e:React.MouseEvent<HTMLButtonElement> ) => void;
    onMouseEnter?: () => void;
    onMouseLeave?: () => void;
-}
+};
 
 const Button = ({ text, className, children, disabled, onClick, onMouseEnter, onMouseLeave }: IButton) => {
    return(

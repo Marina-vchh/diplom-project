@@ -1,4 +1,4 @@
-import StickersCart from "../../../containers/StickersCart/StickersCart";
-import LoadingHOC from "../../../containers/LoadingHOC/LoadingHoc";
+import Cart from "../../../containers/cart/Cart";
+import LoadingHOC from "../../../containers/loadingHOC/LoadingHoc";
 
-export const LinksComponentCart = LoadingHOC('data')(StickersCart);
+export const LinksComponentCart = LoadingHOC('data')(Cart);

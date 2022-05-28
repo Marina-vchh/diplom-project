@@ -1,17 +1,14 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import Background from "../../containers/background/Background";
-import Footer from "../../containers/footer/Footer";
 import { LinksComponentCart } from "../../components/common-components/LinksComponent/LinksComponentCart"
-import './cartPage.css';
-import { Routes, Route, NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../components/common-components/button/Button";
 import OrderBlock from "../../containers/order-block/OrderBlock";
-
+import Footer from "../../containers/footer/Footer";
+import "./cartPage.css";
 interface ICartPage {
    data: any
-}
-
+};
 
 const CartPage = () => {
    const {id} = useParams();
@@ -36,7 +33,7 @@ const CartPage = () => {
          </Link>
          <Footer />
       </div>
-   )
-} 
+   );
+} ;
 
 export default CartPage;

@@ -11,7 +11,6 @@ import CartPage from "./pages/cartPage/CartPage";
 
 function App() {
   return (
-    <>
     <Routes>
         <Route path= "/" element={<StickerPage />} />
         <Route path="/stickerPage" element={<StickerPage />} />
@@ -27,7 +26,6 @@ function App() {
         </Route>
           <Route path="/wishListPage" element={<WishListPage />} />
     </Routes>
-    </>
   )
 }
 

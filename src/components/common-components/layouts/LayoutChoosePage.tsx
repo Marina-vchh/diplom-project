@@ -7,7 +7,7 @@ import './/layouts.css';
 const LayoutChoosePage = () => {
     return (
         <>
-            <Background titleText="Shop" className="background background-choose" titleTextClassname="title-wrapper title-wrapper-order"/>
+            <Background titleText="Shop" className="background background-choose" />
             <ul className="layout">
                 <li>
                     <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">

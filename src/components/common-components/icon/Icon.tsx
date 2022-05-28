@@ -7,7 +7,7 @@ interface IIcon {
 
 const Icon = ({ children }: IIcon) => {
    return (
-      <div className="icons">
+      <div className="icons-wrapper">
          {children}
       </div>
    );

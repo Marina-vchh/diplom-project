@@ -4,14 +4,14 @@ import { removeSticker } from "../../redux/actions/stickersActionsCreators/stick
 import { useDispatch } from "react-redux";
 import Button from "../../components/common-components/button/Button";
 import Counter from "../counter/Counter";
-import "./StickersCart.css";
-import { STICKERS } from "../../mock-data"
+import { STICKERS } from "../../mock-data";
+import "./cart.css";
 
-interface IStickersCart {
+interface ICart {
    data: any
 }
 
-const StickersCart = ({data : {data}}: IStickersCart) => {
+const Cart = ({data : {data}}: ICart) => {
    const cartItem = [...STICKERS].filter((item) => item.id === data.id);
 
    const dispatch = useDispatch();
@@ -48,4 +48,4 @@ const StickersCart = ({data : {data}}: IStickersCart) => {
    )
 };
 
-export default StickersCart;
+export default Cart;

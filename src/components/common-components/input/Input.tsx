@@ -34,6 +34,6 @@ const Input = ({id, label, className, type, value, pattern, changeValue, onBlur}
             className={'input'} />
       </div>
    )
-}
+};
 
-export default Input
+export default Input;

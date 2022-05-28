@@ -9,7 +9,7 @@ interface ILayout {
 const LayoutCheckoutPage = () => {
     return (
         <>
-            <Background titleText="Checkout" className="background background-checkout" titleTextClassname=""/>
+            <Background titleText="Checkout" className="background background-checkout" />
             <ul className="layout">
                 <li>
                     <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">

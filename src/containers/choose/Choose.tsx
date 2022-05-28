@@ -1,23 +1,20 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { STICKERS, IStickers } from "../../mock-data";
-import StickerItem from '../../components/sticker-components/stickerItem/StickerItem';
-import StickersCart from '../StickersCart/StickersCart';
+import { STICKERS, } from "../../mock-data";
+import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
+import StickersCart from "../cart/Cart";
 import Counter from "../counter/Counter";
-import Title from '../../components/common-components/title/Title';
-import Button from '../../components/common-components/button/Button';
-import './stickerChoose.css';
-
+import Title from "../../components/common-components/title/Title";
+import Button from "../../components/common-components/button/Button";
+import "./choose.css";
 
 interface IChooseStickers {
    data: any;
-}
+};
 
 const StickersChoose = ({ data : { data } }: IChooseStickers) => {
    const chooseItem = [...STICKERS].filter((item) => item.id === data.id);
 
-   console.log(chooseItem[0].name)
-   
    return(
       <div>
          <div className="sticker-choose">
@@ -58,7 +55,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
          </Routes>
       </div>
       </div>
-   )
+   );
 };
 
 export default StickersChoose;

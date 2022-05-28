@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../../common-components/button/Button";
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import { IStickers, STICKERS } from "../../../mock-data";
-import StickerChoose from "../../../containers/stickersChoose/StickersChoose";
+import StickerChoose from "../../../containers/choose/Choose";
 import StickerItem from "../stickerItem/StickerItem";
 import './stickerItemList.css';
 

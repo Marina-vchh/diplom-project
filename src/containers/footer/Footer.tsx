@@ -22,7 +22,7 @@ const Footer = () => {
          </Icon>
          </div>
       </div>
-   )
-}
+   );
+};
 
 export default Footer;

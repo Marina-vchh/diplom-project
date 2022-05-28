@@ -9,7 +9,7 @@ interface ILayout {
 const LayoutCartPage = () => {
     return (
         <>
-            <Background titleText="Cart" className="background background-cart" titleTextClassname=""/>
+            <Background titleText="Cart" className="background background-cart" />
             <ul className="layout">
                 <li>
                     <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">

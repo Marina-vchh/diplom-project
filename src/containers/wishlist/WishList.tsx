@@ -1,12 +1,7 @@
 import React from "react";
 import Button from "../../components/common-components/button/Button";
 import { useNavigate } from "react-router-dom";
-import Counter from "../counter/Counter";
 import "./wishList.css";
-
-interface IWishList {
-
-}
 
 const WishList = () => {
    const navigate = useNavigate();
@@ -21,9 +16,9 @@ const WishList = () => {
                <td className="table-column"> Price </td>
                <td className="table-column"> Stock status </td>
             </tr>
-       </table>
+         </table>
       <Button text="All stickers" className="button transparent-background wishList-button" onClick={goHome} />
       </div>
-   )
-}
+   );
+};
 export default WishList;

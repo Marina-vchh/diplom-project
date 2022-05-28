@@ -1,14 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import Title from "../../components/common-components/title/Title";
-import Button from "../../components/common-components/button/Button";
 import { counterSelector } from "../../redux/selectors/counter-selectors/counterSelectors";
+import Title from "../../components/common-components/title/Title";
 import "./orderBlock.css";
 
 interface IOrderBlock {
    text: string;
-}
+};
 
 const OrderBlock = ({ text }: IOrderBlock) => {
    const count = useSelector(counterSelector);
@@ -32,7 +30,7 @@ const OrderBlock = ({ text }: IOrderBlock) => {
             </tr>
          </table>
       </div>
-   )
+   );
 };
 
 export default OrderBlock;

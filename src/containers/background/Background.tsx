@@ -5,17 +5,16 @@ import './background.css';
 
 interface IBackground {
    titleText: string;
-   titleTextClassname: string;
    className: string;
-}
+};
 
-const Background = ({titleText, className, titleTextClassname}: IBackground) => {
+const Background = ({ titleText, className }: IBackground) => {
    return (
       <div className={className}>
          <Header />
-         <TitleMain text={titleText} className={titleTextClassname} />
+         <TitleMain text={titleText} />
       </div>
    )
-}
+};
 
 export default Background;

@@ -2,8 +2,6 @@ import React, {useState, useCallback} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { counterSelector } from "../../redux/selectors/counter-selectors/counterSelectors";
 import { increment, decrement } from "../../redux/actions/counterActionCreators/counterActionCreator";
-import "./counter.css";
-import { classNames } from "react-select/dist/declarations/src/utils";
 
 interface ICounter {
    className: string;
@@ -34,8 +32,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
          setDisabled(false)
          dispatchedDecrement()
       }
-   }
-
+   };
 
    return(
       <div className={className}>
@@ -43,7 +40,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
          <span className={classNameCount}>{count}</span>
          <button className={classNameButton} onClick={isValid} disabled={disabled}>-</button>
       </div>
-   )
-}
+   );
+};
 
 export default Counter;

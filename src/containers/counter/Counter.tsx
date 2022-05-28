@@ -3,8 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { counterSelector } from "../../redux/selectors/counter-selectors/counterSelectors";
 import { increment, decrement } from "../../redux/actions/counterActionCreators/counterActionCreator";
 import "./counter.css";
+import { classNames } from "react-select/dist/declarations/src/utils";
 
-const Counter = () => {
+interface ICounter {
+   className: string;
+   classNameCount: string;
+   classNameButton: string;
+}
+
+const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
 
    const dispatch = useDispatch();
    const count = useSelector(counterSelector);
@@ -20,10 +27,10 @@ const Counter = () => {
    );
 
    return(
-      <div className="counter">
-         <button className="button-counter" onClick={dispatchedIncrement}>+</button>
-         <span className="count">{count}</span>
-         <button className="button-counter" onClick={dispatchedDecrement}>-</button>
+      <div className={className}>
+         <button className={classNameButton} onClick={dispatchedIncrement}>+</button>
+         <span className={classNameCount}>{count}</span>
+         <button className={classNameButton} onClick={dispatchedDecrement}>-</button>
       </div>
    )
 }

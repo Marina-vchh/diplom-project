@@ -1,0 +1,40 @@
+.cart-wrapper {
+   padding: 70px 100px;
+}
+
+.table-cart {
+   max-width: 926px;
+   width: 100%;
+   margin: 0 auto;
+   margin-bottom: 50px;
+}
+
+.table-row {
+   width: 100%;
+}
+
+.table-column {
+   text-align: center;
+   font-size: 20px;
+   padding: 20px;
+}
+
+.cart-button {
+   margin-left: auto;
+   margin-bottom: 50px;
+}
+
+.count-transparent {
+   padding: 7px 15px;
+   font-weight: 600;
+   color: #143550;
+   background-color: transparent;
+   border-top:1px solid #143550;
+   border-bottom:1px solid #143550;
+}
+
+.sticker-choose-text {
+   font-size: 14px;
+   color: #143550;
+}
+

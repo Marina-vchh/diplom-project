@@ -5,7 +5,7 @@ import { STICKERS, IStickers } from "../../mock-data";
 import "./relatedStickers.css"
 
 const RelatedStickers = () => {
-   const spliceStickers = STICKERS.splice(0, 3)
+   const spliceStickers = [...STICKERS].splice(0, 3);
    return(
       <div className="related-stickers-wrapper">
          <Title text="Related Products" className="title-thumbnail"/>

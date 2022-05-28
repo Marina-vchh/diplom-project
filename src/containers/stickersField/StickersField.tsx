@@ -111,7 +111,7 @@ const StickersField = () => {
          <div>  
             <StickerItemList data={filteredStickers} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" />
          </div>
-            <Button text="All stickers" className="button transparent-background"/> 
+            <Button text="All stickers" className="button transparent-background sticker-field-button"/> 
          </div>
    )
 };

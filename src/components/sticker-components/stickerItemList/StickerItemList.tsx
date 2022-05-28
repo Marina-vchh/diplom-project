@@ -26,16 +26,14 @@ const StickerItemList = ({data, className, setLikesArray}: IPosts) => {
                          name={name} 
                          price={price} 
                          isLike={isLike} 
-                         className={className}
                          setLikesArray={setLikesArray} />
          )}
          )}
       </ul>
-      {console.log(data)}
       <Routes>
                { 
                   data.map((item: any) => {
-                     return <Route key={item.id} path={`${item.id}`} element={<StickerChoose array={item} />} />
+                     return <Route key={item.id} path={`${item.id}`} element={<StickerChoose data={item} />} />
                   })
                 }
       </Routes>

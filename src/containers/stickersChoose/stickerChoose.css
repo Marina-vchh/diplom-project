@@ -1,10 +1,48 @@
-.sticker-choose{
+li {
+   list-style-type: none;
+}
+
+.sticker-choose {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 150px;
+   justify-content: space-between;
+   align-items: center;
    padding: 50px 100px;
    max-width: 788px;
    width: 100%;
+   margin: 0 auto;
 }
 
-.counter-button-group{
+.sticker-choose-counter {
+   max-width: 124px;
+   width: 100%;
    display: flex;
-   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 40px;
+}
+
+.sticker-choose-counter-button{
+   padding: 10px 15px;
+   border: none;
+   color: #143550;
+   border-top: 1px solid #143550;
+   border-bottom: 1px solid #143550;
+   background-color: transparent;
+}
+
+.count-filled {
+   padding: 8px 15px;
+   font-weight: 600;
+   color: #fff;
+   background-color: #143550;
+}
+
+.choose-button {
+   padding: 10px 30px;
+   margin-right: auto;
+}
+
+.sticker-choose-sticker-item-list {
+   display: flex;
 }

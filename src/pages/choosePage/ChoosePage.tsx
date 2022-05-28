@@ -24,9 +24,7 @@ const ChoosePage = () => {
             .then(data => updateState(data));
 
         const updateState = (data: IChooseStickers[keyof IChooseStickers]) => {
-            window.setTimeout(() => {
                 setData({ data })
-            }, 1000);
         }
     }, [id]);
 

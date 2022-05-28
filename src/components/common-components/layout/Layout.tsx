@@ -14,6 +14,11 @@ const Layout = () => {
                         Home
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
+                        Coffee
+                    </NavLink>
+                </li>
             </ul>
             <Outlet />
         </>

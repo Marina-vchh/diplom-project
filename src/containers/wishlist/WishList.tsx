@@ -17,9 +17,9 @@ const WishList = () => {
       <div className="wishlist">
          <table className="table-wishlist">
             <tr className="table-wishlist__header">
-               <td> Product </td>
-               <td> Price </td>
-               <td> Stock status </td>
+               <td className="table-column"> Product </td>
+               <td className="table-column"> Price </td>
+               <td className="table-column"> Stock status </td>
             </tr>
        </table>
       <Button text="All stickers" className="button transparent-background wishList-button" onClick={goHome} />

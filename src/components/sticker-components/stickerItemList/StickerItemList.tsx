@@ -28,8 +28,7 @@ const StickerItemList = ({data, className, classNameButton, setLikesArray}: IPos
                          price={price} 
                          classNameButton={classNameButton}
                          isLike={isLike} 
-                         setLikesArray={setLikesArray}
- />
+                         setLikesArray={setLikesArray}/>
          )}
          )}
       </ul>

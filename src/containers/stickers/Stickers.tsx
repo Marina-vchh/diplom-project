@@ -16,9 +16,7 @@ const Stickers = () => {
    const [isActiveSelect, setIsActiveSelect] = useState(false);
 
    const filter = useSelector(filtersSelector);
-   const sticker = useSelector(StickerSelector);
-
-   console.log(sticker)
+   const stickers = useSelector(StickerSelector);
 
    const dispatch = useDispatch();
 
@@ -49,9 +47,9 @@ const Stickers = () => {
           default:
               return stickers;
       }
-  }, [filter, STICKERS]);
+  }, [filter, stickers]);
 
-   const filteredStickers = useMemo(() => filterStickers(STICKERS), [STICKERS, filterStickers]);
+   const filteredStickers = useMemo(() => filterStickers(stickers), [stickers, filterStickers]);
 
    const handleSelectActive = () => {
      if(!isActiveSelect){

@@ -14,9 +14,9 @@ interface IRemoveAction {
     };
 }
 
-export type TLikeActionTypes = ILikeAction | IRemoveAction;
+export type TStickerActionTypes = ILikeAction | IRemoveAction;
 
-export const like = (id: number): TLikeActionTypes => {
+export const like = (id: number): TStickerActionTypes => {
     return {
         type: LIKE,
         payload: {
@@ -25,7 +25,7 @@ export const like = (id: number): TLikeActionTypes => {
     }
 }
 
-export const removeSticker = (id: number): TLikeActionTypes => {
+export const removeSticker = (id: number): TStickerActionTypes => {
     return {
         type: REMOVE_STICKER,
         payload: {

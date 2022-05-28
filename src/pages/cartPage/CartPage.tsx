@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { LinksComponentCart } from "../../components/common-components/LinksComponent/LinksComponentCart"
+import { LinksComponentCart } from "../../components/common-components/LinksComponent"
 import { Link } from "react-router-dom";
 import Button from "../../components/common-components/button/Button";
 import OrderBlock from "../../containers/order-block/OrderBlock";

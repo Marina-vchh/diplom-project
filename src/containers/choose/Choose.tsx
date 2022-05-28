@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { STICKERS, } from "../../mock-data";
+import { useDispatch, useSelector } from 'react-redux';
+import { STICKERS } from "../../mock-data";
+import { StickerSelector } from '../../redux/selectors/stickers-selectors/sticker-selector';
+import { like } from '../../redux/actions/stickersActionsCreators/stickersActionsCreators';
 import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
 import StickersCart from "../cart/Cart";
 import Counter from "../counter/Counter";
@@ -13,7 +16,16 @@ interface IChooseStickers {
 };
 
 const StickersChoose = ({ data : { data } }: IChooseStickers) => {
-   const chooseItem = [...STICKERS].filter((item) => item.id === data.id);
+   const stickers = useSelector(StickerSelector);
+
+   const dispatch = useDispatch();
+
+   const dispatchedSetLike = useCallback(
+      (id: number) => dispatch(like(id)),
+      [dispatch]
+  );
+
+  const chooseItem = [...stickers].filter((item) => item.id === data.id);
 
    return(
       <div>
@@ -27,7 +39,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                               name={item.name}
                               price={item.price}
                               isLike={item.isLike} 
-                              setLikesArray={(id: number) => {}}
+                              setLikesArray={dispatchedSetLike}
                               classNameButton="hidden" />
             ))
          }

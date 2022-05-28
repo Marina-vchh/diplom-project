@@ -1,7 +1,8 @@
 import React, {useCallback} from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
-import { useDispatch } from "react-redux";
 import Button from "../../components/common-components/button/Button";
 import Counter from "../counter/Counter";
 import { STICKERS } from "../../mock-data";
@@ -12,7 +13,7 @@ interface ICart {
 }
 
 const Cart = ({data : {data}}: ICart) => {
-   const cartItem = [...STICKERS].filter((item) => item.id === data.id);
+   const sticker = useSelector(StickerSelector)
 
    const dispatch = useDispatch();
 
@@ -20,6 +21,8 @@ const Cart = ({data : {data}}: ICart) => {
       (id: number) => dispatch(removeSticker(id)),
       [dispatch]
   );
+
+  const cartItem = [...sticker].filter((item) => item.id === data.id);
 
   const navigate = useNavigate();
 

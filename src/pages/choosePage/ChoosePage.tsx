@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../containers/footer/Footer";
-import { LinksComponentChoose } from "../../components/common-components/LinksComponent/LinksComponentChoose";
+import { LinksComponentChoose } from "../../components/common-components/LinksComponent";
 import Related from "../../containers/related/Related";
 import "./choosePage.css";
 

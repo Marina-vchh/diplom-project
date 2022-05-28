@@ -17,7 +17,7 @@ interface IStickerItem {
 const StickerItem = ({id, src, alt, name, price, classNameButton, isLike, setLikesArray}: IStickerItem) => {
    return (
       <li className="sticker-item">
-            <button className={isLike ? "button-like button-active": "button-like"} onClick={() => setLikesArray(id)} />
+            <button className={isLike ? "button-like button-active": "button-like"} onClick={() => console.log(setLikesArray(id))} />
             <img src={src} alt={alt} />
             <div className="sticker-item__info">
                <div className="sticker-item__name">{name}</div>

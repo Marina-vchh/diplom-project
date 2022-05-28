@@ -36,14 +36,43 @@ const Cart = ({data : {data}}: ICart) => {
                <td className="table-column-header">Price</td>
                <td className="table-column-header">Quantity</td>
                <td className="table-column-header">Total</td>
-               <td className="table-column-header"></td>
+               <td className="table-column-header" />
             </tr>
             <tr>
-               <td className="table-column">{cartItem[0].name}</td>
-               <td className="table-column">{cartItem[0].price}</td>
+               <td className="table-column">
+                  {
+                     cartItem.map((item) => {
+                        return (
+                           <div className="product-name-group">
+                              <img className="sticker-item-img-in-table" src={item.src} alt={item.alt} />
+                              <p className="table-column-text">{item.name}</p>
+                           </div>
+                        )
+                     })
+                  }
+               </td>
+               <td className="table-column">
+                  {
+                     cartItem.map((item) => {
+                        return (
+                           <p className="table-column-text">{item.price}</p>
+                        )
+                     })
+                  }
+               </td>
                <td className="table-column"><Counter className="sticker-cart-counter" classNameCount="count-transparent" classNameButton="sticker-cart-counter-button" /></td>
-               <td className="table-column">{cartItem[0].price}</td>
-               <td className="table-column-header"><button className="delete-button" onClick={() => dispatchedRemoveSticker}></button></td>
+               <td className="table-column">
+                  {
+                     cartItem.map((item) => {
+                        return (
+                           <p className="table-column-text">{item.price}</p>
+                        )
+                     })
+                  }
+               </td>
+               <td className="table-column-header">
+                  <button className="delete-button" onClick={() => dispatchedRemoveSticker} />
+               </td>
             </tr>
          </table>
          <Button onClick={goHome} text="Continue shopping" className="button transparent-background cart-button" />

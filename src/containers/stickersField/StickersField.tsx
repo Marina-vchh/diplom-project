@@ -89,22 +89,12 @@ const StickersField = () => {
      }
    };
 
-   // const sortStickersLTH = (stickers: INewArr[]) => {
-   //    let result = stickers.sort(function(a,b):any{
-   //       if(a.price > b.price) 
-   //       return -1
-   //    });
-   //    console.log(result)
-   //    return result
-   // };
-
-   // const sortStickersZtoA = (data: INewArr[] ) => {
-   //    let result = data.sort(function(a,b):any{
-   //       if(a.name > b.name) 
-   //       return -1
-   //    });
-   //    return result
-   // };
+   const sortStickers = (data: IStickers[], prop: keyof IStickers, dir: boolean = false) => {
+      let result = data.sort(function(a, b): any{
+         if((dir === false) ? a[prop] < b[prop] : a[prop] > b[prop]) return -1;
+      });
+      return result;
+   };
 
    return(
       <div className="stickers-field">
@@ -115,10 +105,11 @@ const StickersField = () => {
                            filterChange={dispatchedFilterChange}  />
             <Select handleSelectActive={handleSelectActive} 
                     classNameSelect={isActiveSelect ? 'select-body' : 'hidden'} 
-                    classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'} />
+                    classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'}
+                    sortStickers={sortStickers }/>
          </div>
          <div>  
-            <StickerItemList data={STICKERS} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" />
+            <StickerItemList data={filteredStickers} setLikesArray={dispatchedSetLikesArray} className="sticker-item-list" />
          </div>
             <Button text="All stickers" className="button transparent-background"/> 
          </div>

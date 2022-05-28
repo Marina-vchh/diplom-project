@@ -7,24 +7,27 @@ interface ISelect {
    classNameSelect: string;
    classNameArrow: string;
    handleSelectActive: () => void;
-   // sortStickersZtoA: (newStickersArr: INewArr[]) => INewArr[];
-   // sortStickersLTH: (stickers: INewArr[]) => INewArr[];
+   sortStickers: (stickers: IStickers[], prop: any, dir: boolean) => IStickers[]
+   // sortAtoZ: (stickers: IStickers[]) => IStickers[];
+   // sortZtoA: (stickers: IStickers[]) => IStickers[];
+   // sortLowToHigh: (stickers: IStickers[]) => IStickers[];
+   // sortHighToLow: (stickers: IStickers[]) => IStickers[];
 }
 
-const SelectComponent = ({classNameSelect, classNameArrow, handleSelectActive}: ISelect) => {
+const SelectComponent = ({classNameSelect, classNameArrow, handleSelectActive, sortStickers}: ISelect) => {
    return(
       <div className="select is-active">
 	      <div className="select__header" onClick={handleSelectActive}>
 		      <span className="select__current">Sort By</span>
 		      <div className={classNameArrow} />
-	      </div>
 	      <div className={classNameSelect}>
-            <div className="select__item">Name, A to Z</div>
-            <div className="select__item" >Name, Z to A</div>
-            <div className="select__item" >Price, low to high</div>
-            <div className="select__item">Price, high to low</div>
+            <div className="select__item" onClick={()=> sortStickers(STICKERS, "name", false)}>Name, A to Z</div>
+            <div className="select__item" onClick={()=> sortStickers(STICKERS, "name", true)}>Name, Z to A</div>
+            <div className="select__item" onClick={()=> sortStickers(STICKERS, "price", false)}>Price, low to high</div>
+            <div className="select__item" onClick={()=> sortStickers(STICKERS, "price", true)}>Price, high to low</div>
 	      </div>
-      </div>
+     </div>
+   </div>
    );
 };
 

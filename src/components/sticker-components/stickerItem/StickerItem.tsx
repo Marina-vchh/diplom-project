@@ -10,14 +10,15 @@ interface IStickerItem {
    name: string;
    price: number;
    classNameButton: string;
+   classNameButtonLike: string;
    isLike: boolean;
    setLikesArray: (id: number) => void;
 };
 
-const StickerItem = ({id, src, alt, name, price, classNameButton, isLike, setLikesArray}: IStickerItem) => {
+const StickerItem = ({id, src, alt, name, price, classNameButton, isLike, classNameButtonLike, setLikesArray}: IStickerItem) => {
    return (
       <li className="sticker-item">
-            <button className={isLike ? "button-like button-active": "button-like"} onClick={() => console.log(setLikesArray(id))} />
+            <button className={classNameButtonLike} onClick={() => setLikesArray(id)} />
             <img src={src} alt={alt} />
             <div className="sticker-item__info">
                <div className="sticker-item__name">{name}</div>

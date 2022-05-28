@@ -7,9 +7,43 @@
    width: 100%;
    margin: 0 auto;
    margin-bottom: 50px;
+   border-spacing: 7px 11px;
 }
 
-.table-wishlist__header{
-   border: 1px solid rgb(84, 84, 84);
+.table-wishlist-row {
+   margin-bottom: 40px;
 }
+
+.table-wishlist-row__header {
+   text-align: center;
+   font-weight: 600;
+   font-size: 20px;
+   color: #30404D;
+}
+
+.table-column{
+   text-align: center;
+   font-size: 14px;
+   color: #30404D;
+}
+
+.sticker-item-img-in-table {
+   width: 60px;
+   height: 60px;
+}
+
+.wishList-button {
+   margin: 0 auto;
+}
+
+.product-name-group {
+   display: flex;
+   justify-content: center;
+   column-gap: 40px;
+}
+
+.delete-button {
+   display: block;
+}
+
 

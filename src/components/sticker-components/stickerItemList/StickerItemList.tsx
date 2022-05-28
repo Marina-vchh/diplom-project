@@ -27,6 +27,7 @@ const StickerItemList = ({data, className, classNameButton, setLikesArray}: IPos
                          name={name} 
                          price={price} 
                          classNameButton={classNameButton}
+                         classNameButtonLike={isLike ? "button-like button-active": "button-like"}
                          isLike={isLike} 
                          setLikesArray={setLikesArray}/>
          )}

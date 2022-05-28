@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IFilterButtons {
    id: string;
    value: string;
@@ -41,6 +43,7 @@ export interface IStickers {
    name: string;
    price: number;
    isLike: boolean;
+   stock: string;
 }
 
 export const STICKERS: IStickers[] = [
@@ -51,6 +54,7 @@ export const STICKERS: IStickers[] = [
       name: 'Coffee',
       price: 1.53,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 2,
@@ -59,6 +63,7 @@ export const STICKERS: IStickers[] = [
       name: 'Foot',
       price: 1.57,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 3,
@@ -67,6 +72,7 @@ export const STICKERS: IStickers[] = [
       name: 'Girl',
       price: 1.51,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 4,
@@ -75,6 +81,7 @@ export const STICKERS: IStickers[] = [
       name: 'Flower',
       price: 1.52,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 5,
@@ -83,6 +90,7 @@ export const STICKERS: IStickers[] = [
       name: 'Macaroni',
       price: 1.58,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 6,
@@ -91,6 +99,7 @@ export const STICKERS: IStickers[] = [
       name: 'Sign',
       price: 1.55,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 7,
@@ -99,6 +108,7 @@ export const STICKERS: IStickers[] = [
       name: 'Bear',
       price: 1.51,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 8,
@@ -107,6 +117,7 @@ export const STICKERS: IStickers[] = [
       name: 'Idea',
       price: 1.55,
       isLike: false,
+      stock: "In Stock",
    },
    {
       id: 9,
@@ -115,5 +126,6 @@ export const STICKERS: IStickers[] = [
       name: 'Sheep',
       price: 1.55,
       isLike: false,
+      stock: "In Stock",
    }
 ];

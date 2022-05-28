@@ -38,6 +38,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                               alt={item.alt}
                               name={item.name}
                               price={item.price}
+                              classNameButtonLike={item.isLike ? "button-like button-active": "button-like"}
                               isLike={item.isLike} 
                               setLikesArray={dispatchedSetLike}
                               classNameButton="hidden" />

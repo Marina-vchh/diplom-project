@@ -10,10 +10,11 @@ import './stickerItemList.css';
 interface IPosts {
    data: IStickers[];
    className: string;
+   classNameButton: string;
    setLikesArray: (id: number) => void;
 }
 
-const StickerItemList = ({data, className, setLikesArray}: IPosts) => {
+const StickerItemList = ({data, className, classNameButton, setLikesArray}: IPosts) => {
    return(
       <div>
       <ul className={className}>
@@ -25,8 +26,10 @@ const StickerItemList = ({data, className, setLikesArray}: IPosts) => {
                          alt={alt} 
                          name={name} 
                          price={price} 
+                         classNameButton={classNameButton}
                          isLike={isLike} 
-                         setLikesArray={setLikesArray} />
+                         setLikesArray={setLikesArray}
+ />
          )}
          )}
       </ul>

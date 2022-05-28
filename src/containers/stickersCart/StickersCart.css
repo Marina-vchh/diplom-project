@@ -24,6 +24,20 @@
    margin-bottom: 50px;
 }
 
+.sticker-choose-text {
+   font-size: 14px;
+   color: #143550;
+}
+
+.sticker-cart-counter {
+   max-width: 124px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin-bottom: 40px;
+   margin: 0 auto;
+}
+
 .count-transparent {
    padding: 7px 15px;
    font-weight: 600;
@@ -33,8 +47,11 @@
    border-bottom:1px solid #143550;
 }
 
-.sticker-choose-text {
-   font-size: 14px;
+.sticker-cart-counter-button{
+   padding: 10px 15px;
+   border: none;
    color: #143550;
+   border-top: 1px solid #143550;
+   border-bottom: 1px solid #143550;
+   background-color: transparent;
 }
-

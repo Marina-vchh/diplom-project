@@ -31,7 +31,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
       } else {
          setDisabled(false)
          dispatchedDecrement()
-      }
+      };
    };
 
    return(

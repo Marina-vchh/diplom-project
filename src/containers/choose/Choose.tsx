@@ -48,11 +48,15 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
          <div className="sticker-choose-group"> 
             <p className="sticker-choose-text">more information about stickers</p>  
             <Title text="Quantity" className="title-thin" />
-            <Counter className="sticker-choose-counter" classNameCount="count-filled" classNameButton="sticker-choose-counter-button" />
+            <Counter className="sticker-choose-counter" 
+                     classNameCount="count-filled" 
+                     classNameButton="sticker-choose-counter-button" />
             {chooseItem.map((item: any) => {
                return(
                   <Link key={item.id} to={`/cartPage/${item.id}`}>
-                     <Button disabled={false} text="Add to cart" className="button filled-background choose-button" />
+                     <Button disabled={false} 
+                             text="Add to cart" 
+                             className="button filled-background choose-button" />
                   </Link>
                )
             })}

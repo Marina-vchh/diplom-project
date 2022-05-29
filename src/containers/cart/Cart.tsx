@@ -44,7 +44,8 @@ const Cart = ({data : {data}}: ICart) => {
                      cartItem.map((item) => {
                         return (
                            <div className="product-name-group">
-                              <img className="sticker-item-img-in-table" src={item.src} alt={item.alt} />
+                              <img className="sticker-item-img-in-table" 
+                                   src={item.src} alt={item.alt} />
                               <p className="table-column-text">{item.name}</p>
                            </div>
                         )
@@ -60,7 +61,9 @@ const Cart = ({data : {data}}: ICart) => {
                      })
                   }
                </td>
-               <td className="table-column"><Counter className="sticker-cart-counter" classNameCount="count-transparent" classNameButton="sticker-cart-counter-button" /></td>
+               <td className="table-column">
+                  <Counter className="sticker-cart-counter" classNameCount="count-transparent" classNameButton="sticker-cart-counter-button" />
+               </td>
                <td className="table-column">
                   {
                      cartItem.map((item) => {
@@ -71,11 +74,15 @@ const Cart = ({data : {data}}: ICart) => {
                   }
                </td>
                <td className="table-column-header">
-                  <button className="delete-button" onClick={() => dispatchedRemoveSticker} />
+                  <button className="delete-button" 
+                          onClick={() => dispatchedRemoveSticker} />
                </td>
             </tr>
          </table>
-         <Button disabled={false} onClick={goHome} text="Continue shopping" className="button transparent-background cart-button" />
+         <Button disabled={false} 
+                 onClick={goHome} 
+                 text="Continue shopping" 
+                 className="button transparent-background cart-button" />
        </div>
    )
 };

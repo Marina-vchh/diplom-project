@@ -1,5 +1,5 @@
 import React from "react";
-import '../button/button-css/button.css';;
+import "../button/button-css/button.css";
 
 interface IButton {
    text: string;

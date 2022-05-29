@@ -9,7 +9,7 @@ interface ISelect {
    sortStickers: ( stickers: IStickers[], prop: keyof IStickers, dir: boolean ) => IStickers[]
 }
 
-const SelectComponent = ({ classNameSelect, classNameArrow, handleSelectActive, sortStickers }: ISelect) => {
+const Select = ({ classNameSelect, classNameArrow, handleSelectActive, sortStickers }: ISelect) => {
    return (
       <div className="select is-active">
 	      <div className="select__header" onClick={handleSelectActive}>
@@ -34,4 +34,4 @@ const SelectComponent = ({ classNameSelect, classNameArrow, handleSelectActive, 
    );
 };
 
-export default SelectComponent;
+export default Select;

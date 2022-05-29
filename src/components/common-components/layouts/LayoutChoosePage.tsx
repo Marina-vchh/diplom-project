@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Background from "../../../containers/background/Background";
-import './/layouts.css';
+import "./layouts.css";
 
 
 const LayoutChoosePage = () => {

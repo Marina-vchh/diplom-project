@@ -7,10 +7,9 @@ interface ITitle {
 };
 
 const Title = ({ text, className }: ITitle) => {
-
-   return(
-      <h2 className={className}>{text}</h2>
-   )
+   return (
+      <h2 className={className}> {text} </h2>
+   );
 };
 
 export default Title;

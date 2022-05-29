@@ -7,11 +7,17 @@ import OrderBlock from "../../containers/order-block/OrderBlock";
 import Footer from "../../containers/footer/Footer";
 import "./cartPage.css";
 interface ICartPage {
-   data: any
+   data: IResult[];
+};
+interface IResult {
+   userId: number;
+   id: number;
+   title: string;
+   body: string;
 };
 
 const CartPage = () => {
-   const {id} = useParams();
+   const { id } = useParams();
    const [data, setData] = useState<ICartPage | null>(null);
 
     useEffect(() => {

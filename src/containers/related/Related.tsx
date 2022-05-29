@@ -6,7 +6,7 @@ import "./related.css"
 
 const Related = () => {
    const spliceStickers = [...STICKERS].splice(0, 3);
-   return(
+   return (
       <div className="related-stickers-wrapper">
          <Title text="Related Products" className="title-thumbnail"/>
          <StickerItemList data={spliceStickers} 

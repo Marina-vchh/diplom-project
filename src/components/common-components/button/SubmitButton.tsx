@@ -4,22 +4,22 @@ import '../button/button-css/button.css';
 interface IButton {
    text: string;
    disabled: boolean;
-   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+   onClick: ( e: React.MouseEvent<HTMLButtonElement> ) => void;
 };
 
 const SubmitButton = ({ text, disabled, onClick }: IButton) => {
-   const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
+   const onClickAction = ( e: React.MouseEvent<HTMLButtonElement> ) => {
       if (disabled) {
         e.preventDefault();
       } else {
-         onClick(e)
+         onClick(e);
       }
    }
-   return(
+   return (
       <button 
          disabled={disabled}
-         className=""
-         onClick={onClickAction}>
+         className="button filled-background"
+         onClick={ onClickAction }>
             {text}
       </button>
    )

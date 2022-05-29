@@ -1,10 +1,10 @@
-import React, {useEffect, useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import FilterButtons from "../../components/sticker-components/filter-buttons/FilterButtons";
 import Select from "../../components/sticker-components/select/Select";
-import { FILTERBUTTONS, STICKERS, IStickers } from "../../mock-data";
+import { FILTERBUTTONS, IStickers } from "../../mock-data";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
-import { like, addToCart } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
+import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import Button from "../../components/common-components/button/Button";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
@@ -51,7 +51,7 @@ const Stickers = () => {
    const filteredStickers = useMemo(() => filterStickers(stickers), [stickers, filterStickers]);
 
    const handleSelectActive = () => {
-     if(!isActiveSelect){
+     if(!isActiveSelect) {
          setIsActiveSelect(true)
      } else {
         setIsActiveSelect(false)
@@ -64,7 +64,6 @@ const Stickers = () => {
       });
       return result;
    };
-
 
    return(
       <div className="stickers-field">

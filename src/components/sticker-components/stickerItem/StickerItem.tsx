@@ -12,28 +12,28 @@ interface IStickerItem {
    classNameButton: string;
    classNameButtonLike: string;
    isLike: boolean;
-   addToCart: (id: number) => void;
-   setLikesArray: (id: number) => void;
+   addToCart: ( id: number ) => void;
+   setLikesArray: ( id: number ) => void;
 };
 
-const StickerItem = ({id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray, addToCart}: IStickerItem) => {
+const StickerItem = ({ id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray, addToCart }: IStickerItem ) => {
    return (
       <li className="sticker-item">
-            <button className={classNameButtonLike} onClick={() => setLikesArray(id)} />
-            <img src={src} alt={alt} />
+            <button className={ classNameButtonLike } onClick={ () => setLikesArray(id) } />
+            <img src={ src } alt={ alt } />
             <div className="sticker-item__info">
-               <div className="sticker-item__name">{name}</div>
-               <div className="sticker-item__price">${price}</div>
+               <div className="sticker-item__name"> {name} </div>
+               <div className="sticker-item__price"> ${price}</div>
             </div>
-                <Link key={id} to={`/stickerPage/${id}`}> 
+                <Link key={id} to={`/stickerPage/${ id }`}> 
                      <Button
                         disabled={false}
                         text="add to cart" 
-                        className={classNameButton}
+                        className={ classNameButton }
                         addToCart={(id: number) => addToCart(id)} />
                 </Link>
             </li>
-   )
+   );
 };
 
 export default StickerItem;

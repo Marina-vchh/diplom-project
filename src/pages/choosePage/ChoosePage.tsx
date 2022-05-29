@@ -3,11 +3,17 @@ import { useParams } from "react-router-dom";
 import Footer from "../../containers/footer/Footer";
 import { HocComponentChoose } from "../../components/common-components/HocComponent";
 import Related from "../../containers/related/Related";
-import "./choosePage.css";
 
 interface IChooseStickers {
-   data: any;
+   data: IResult[];
 }
+
+interface IResult {
+   userId: number;
+   id: number;
+   title: string;
+   body: string;
+};
 
 const ChoosePage = () => {
    const {id} = useParams();
@@ -23,13 +29,13 @@ const ChoosePage = () => {
         }
     }, [id]);
 
-   return(
+   return (
       <>
          <HocComponentChoose data={data} />
          <Related />
          <Footer />
       </>
-   )
+   );
 };
 
 export default ChoosePage;

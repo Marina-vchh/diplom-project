@@ -8,7 +8,7 @@ interface ITitleMain {
 const TitleMain = ({ text }: ITitleMain) => {
    return (
       <div className="title-main-wrapper">
-         <h1 className="title-main">{text}</h1>
+         <h1 className="title-main"> {text} </h1>
       </div>
    );
 };

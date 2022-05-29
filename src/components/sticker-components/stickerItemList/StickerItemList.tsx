@@ -11,16 +11,16 @@ interface IPosts {
    data: IStickers[];
    className: string;
    classNameButton: string;
-   setLikesArray: (id: number) => void;
-   addToCart: (id: number) => void;
+   setLikesArray: ( id: number ) => void;
+   addToCart: ( id: number ) => void;
 }
 
-const StickerItemList = ({data, className, classNameButton, setLikesArray, addToCart}: IPosts) => {
+const StickerItemList = ({ data, className, classNameButton, setLikesArray, addToCart }: IPosts ) => {
    return(
       <div>
-      <ul className={className}>
-         {data.map(({id, src, alt, name, price, isLike}) => {
-         return(
+      <ul className={ className }>
+         {data.map(( { id, src, alt, name, price, isLike} ) => {
+         return (
             <StickerItem id={id}
                          key={id}
                          src={src} 
@@ -28,16 +28,16 @@ const StickerItemList = ({data, className, classNameButton, setLikesArray, addTo
                          name={name} 
                          price={price} 
                          classNameButton={classNameButton}
-                         classNameButtonLike={isLike ? "button-like button-active": "button-like"}
-                         isLike={isLike} 
-                         setLikesArray={setLikesArray}
-                         addToCart={addToCart}/>
+                         classNameButtonLike={isLike ? "button-like button-active": "button-like" }
+                         isLike = { isLike } 
+                         setLikesArray = { setLikesArray }
+                         addToCart = {addToCart}/>
          )}
          )}
       </ul>
       <Routes>
                { 
-                  data.map((item: any) => {
+                  data.map(( item: any ) => {
                      return <Route key={item.id} path={`${item.id}`} element={<StickerChoose data={item} />} />
                   })
                 }

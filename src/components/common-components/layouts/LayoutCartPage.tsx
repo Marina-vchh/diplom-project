@@ -1,10 +1,7 @@
+import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Background from "../../../containers/background/Background";
-import React from "react";
-import './/layouts.css';
-
-interface ILayout {
-}
+import "./layouts.css";
 
 const LayoutCartPage = () => {
     return (

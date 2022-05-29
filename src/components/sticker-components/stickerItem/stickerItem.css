@@ -1,4 +1,4 @@
-.sticker-item{
+.sticker-item {
    position: relative;
    padding: 20px;
    margin: 0 auto;
@@ -18,7 +18,7 @@
    display: none;
 }
 
-.sticker-item__info{
+.sticker-item__info {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -28,13 +28,13 @@
    margin-bottom: 20px;
 }
 
-.sticker-item__name{
+.sticker-item__name {
    font-size: 20px;
    font-weight: 600;
    color: #143550;
 }
 
-.sticker-item__price{
+.sticker-item__price {
    font-size: 24px;
    font-weight: 600;
    color: #DB2C6F;

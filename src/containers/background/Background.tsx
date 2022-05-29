@@ -14,7 +14,7 @@ const Background = ({ titleText, className }: IBackground) => {
          <Header />
          <TitleMain text={titleText} />
       </div>
-   )
+   );
 };
 
 export default Background;

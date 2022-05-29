@@ -9,7 +9,7 @@ import Title from "../../components/common-components/title/Title";
 import './footer.css'
 
 const Footer = () => {
-   return(
+   return (
       <div className="footer">
          <Logo />
          <div>

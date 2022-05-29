@@ -33,7 +33,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
 
   const chooseItem = [...stickers].filter((item) => item.id === data.id);
 
-   return(
+   return (
       <div>
          <div className="sticker-choose">
             <div className="sticker-choose-img">
@@ -59,7 +59,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                      classNameCount="count-filled" 
                      classNameButton="sticker-choose-counter-button" />
             {chooseItem.map((item: any) => {
-               return(
+               return (
                   <Link key={item.id} to={`/cartPage/${item.id}`}>
                      <Button disabled={false} 
                              text="Add to cart" 

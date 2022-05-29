@@ -8,13 +8,13 @@ interface IButton {
 };
 
 const HomeButton = ({ text, className, onClick }: IButton) => {
-   return(
+   return (
       <button 
          className={className}
          onClick={onClick}>
             {text}
       </button>
-   )
+   );
 };
 
 export default HomeButton;

@@ -9,32 +9,32 @@
    transition: all .3s linear;
 }
 
-.transparent-background{
+.transparent-background {
    background-color: rgb(255, 255, 255);
    color: #143550;
 }
 
-.transparent-background:hover{
+.transparent-background:hover {
    background-color: #143550;
    color: #fff;
 }
 
-.filled-background{
+.filled-background {
    background-color: #143550;
    color: #fff;
 }
 
-.filled-background:hover{
+.filled-background:hover {
    background-color: rgb(255, 255, 255);
    color: #143550;
 }
 
-.sticker-item-button{
+.sticker-item-button {
    display: block;
    margin: 0 auto;
 }
 
-.sticker-item-button:hover{
+.sticker-item-button:hover {
    background-color: #1d4e77;
    color: #fff;
 }

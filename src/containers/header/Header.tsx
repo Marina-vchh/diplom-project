@@ -20,7 +20,7 @@ const Header = () => {
             </Icon>
          </div>
       </div>
-   )
-}
+   );
+};
 
-export default Header
+export default Header;

@@ -10,12 +10,9 @@ import Title from "../../components/common-components/title/Title";
 import "./wishList.css";
 
 const WishList = () => {
-   const stickers = useSelector(StickerSelector);
-   const likedStickers = stickers.filter((item: any) => item.isLike);
-
-   console.log(likedStickers)
-
    const dispatch = useDispatch();
+   const stickers = useSelector(StickerSelector);
+   const likedStickers = stickers.filter((item) => item.isLike);
 
    const dispatchedRemoveSticker = useCallback(
       (id: number) => dispatch(removeSticker(id)),
@@ -92,7 +89,7 @@ const WishList = () => {
          </div>
       )
    } else {
-      return(
+      return (
          <>
             <Title text="No like stickers" className="title" />
             <Link to="/">
@@ -102,8 +99,6 @@ const WishList = () => {
             </Link>
          </>
       ) 
-   }
-
-   
+   }; 
 };
 export default WishList;

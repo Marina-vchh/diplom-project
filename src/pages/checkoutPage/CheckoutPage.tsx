@@ -13,7 +13,7 @@ const CheckoutPage = () => {
          </div>
          <Footer />
       </>
-   )
-}
+   );
+};
 
 export default CheckoutPage;

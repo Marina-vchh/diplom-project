@@ -5,30 +5,27 @@ import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticke
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import HomeButton from "../../components/common-components/button/HomeButton";
 import Counter from "../counter/Counter";
-import { STICKERS } from "../../mock-data";
 import "./cart.css";
 
 interface ICart {
-   data: any
+   data: any;
 }
 
-const Cart = ({data : {data}}: ICart) => {
+const Cart = ({ data : { data } }: ICart) => {
    const sticker = useSelector(StickerSelector)
 
    const dispatch = useDispatch();
 
    const dispatchedRemoveSticker = useCallback(
-      (id: number) => dispatch(removeSticker(id)),
+      ( id: number ) => dispatch( removeSticker(id) ),
       [dispatch]
   );
 
-   const cartItem = [...sticker].filter((item) => item.id === data.id);
-
-   console.log(cartItem)
+   const cartItem = [...sticker].filter( ( item ) => item.id === data.id );
 
    const navigate = useNavigate();
 
-   const goHome = () => navigate('/', {replace: true});
+   const goHome = () => navigate('/', { replace: true });
 
    return(
       <div className="cart-wrapper">
@@ -43,12 +40,12 @@ const Cart = ({data : {data}}: ICart) => {
             <tr>
                <td className="table-column">
                   {
-                     cartItem.map((item) => {
+                     cartItem.map(( item ) => {
                         return (
                            <div className="product-name-group">
                               <img className="sticker-item-img-in-table" 
-                                   src={item.src} alt={item.alt} />
-                              <p className="table-column-text">{item.name}</p>
+                                   src={ item.src } alt={ item.alt } />
+                              <p className="table-column-text">{ item.name }</p>
                            </div>
                         )
                      })

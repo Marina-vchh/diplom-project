@@ -10,7 +10,7 @@ interface ICounter {
 }
  
 const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
-   const [disabled, setDisabled] = useState(false)
+   const [disabled, setDisabled] = useState(false);
 
    const dispatch = useDispatch();
    const count = useSelector(counterSelector);
@@ -34,7 +34,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
       };
    };
 
-   return(
+   return (
       <div className={className}>
          <button className={classNameButton} onClick={dispatchedIncrement}>+</button>
          <span className={classNameCount}>{count}</span>

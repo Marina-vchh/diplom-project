@@ -16,11 +16,10 @@ export const LoadingHOC = (loadingProp: string) => <P extends Record<string, any
     class WithLoading extends React.Component<P & WithLoadingProps> {
         render() {
             return isEmpty(this?.props?.[loadingProp]) ? <div className="loader" /> : <WrappedComponent {...this.props as P} />;
-        }
+        };
     };
-
     return WithLoading;
-}
+};
 
 
 export default LoadingHOC;

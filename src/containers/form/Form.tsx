@@ -22,7 +22,6 @@ const Form = () => {
    const [cvcCode, setCvcCode] = useState("");
    const [inputDirty, setInputDirty] = useState(false);
    const [inputError, setInputError] = useState("Поле не может быть пустым");
-   const [isChecked, setIsChecked] = useState(false);
 
    const isValidToSubmit = firstName.length;
 
@@ -31,7 +30,16 @@ const Form = () => {
       setLastName("");
       setTel("");
       setMail("");
-      setIsChecked(isChecked);
+      setCountry("");
+      setCity("");
+      setStreet("");
+      setApartment("");
+      setSuite("");
+      setPostcode("");
+      setNumberCard("");
+      setCardHolder("");
+      setExpiryDate("");
+      setCvcCode("");
    }
 
    function submit (e:React.MouseEvent<HTMLButtonElement>) {
@@ -45,7 +53,6 @@ const Form = () => {
          <form className="form">
             <div className=" wrapper personal-wrapper">
                <Title text="Personal information" className="title-thin" />
-                  {(inputDirty && inputError) && <div>{inputError}</div>}
                   <Input value={firstName} 
                         changeValue={setFirstName} 
                         id={'name'} 
@@ -141,11 +148,11 @@ const Form = () => {
             </div>
             <Button text="Complete" 
                     className="button filled-background submit" 
-                    disabled={true} 
+                    disabled={!isValidToSubmit} 
                     onClick={submit} />      
          </form>
       </div>
    )
 }
 
-export default Form
+export default Form;

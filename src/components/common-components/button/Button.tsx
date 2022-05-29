@@ -10,16 +10,16 @@ interface IButton {
 };
 
 const Button = ({ text, className, children, disabled, onClick }: IButton) => {
-   const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (disabled) {
-        e.preventDefault();
-      }
-   }
+   // const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
+   //    if (disabled) {
+   //      e.preventDefault();
+   //    }
+   // }
    return(
       <button 
          disabled={disabled}
          className={className}
-         onClick={onClickAction}>
+         onClick={onClick}>
             {text}
             {children}
       </button>

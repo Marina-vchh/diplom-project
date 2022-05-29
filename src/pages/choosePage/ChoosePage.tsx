@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../containers/footer/Footer";
-import { LinksComponentChoose } from "../../components/common-components/LinksComponent";
+import { HocComponentChoose } from "../../components/common-components/HocComponent";
 import Related from "../../containers/related/Related";
 import "./choosePage.css";
 
@@ -25,7 +25,7 @@ const ChoosePage = () => {
 
    return(
       <>
-         <LinksComponentChoose data={data} />
+         <HocComponentChoose data={data} />
          <Related />
          <Footer />
       </>

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { LinksComponentCart } from "../../components/common-components/LinksComponent"
+import { HocComponentCart } from "../../components/common-components/HocComponent"
 import { Link } from "react-router-dom";
 import Button from "../../components/common-components/button/Button";
 import OrderBlock from "../../containers/order-block/OrderBlock";
@@ -26,7 +26,7 @@ const CartPage = () => {
 
    return (
       <div className="cart-page">
-         <LinksComponentCart data={data} />
+         <HocComponentCart data={data} />
          <OrderBlock text="Cart Totals" />
          <Link to={"/checkoutPage"}>
             <Button disabled={false}

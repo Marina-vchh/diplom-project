@@ -18,7 +18,7 @@ export const increment = (): TCounterActionTypes => {
        payload: {
 
        }
-   }
+   };
 };
 
 export const decrement = (): TCounterActionTypes => {
@@ -27,5 +27,5 @@ export const decrement = (): TCounterActionTypes => {
        payload: {
 
        }
-   }
+   };
 };

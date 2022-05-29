@@ -8,7 +8,7 @@ import { like } from "../../redux/actions/stickersActionsCreators/stickersAction
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import Button from "../../components/common-components/button/Button";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
-import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
 import "./stickers.css"
 
 const Stickers = () => {
@@ -87,7 +87,7 @@ const Stickers = () => {
                     disabled={false}
                     className="button transparent-background all-stickers-button" /> 
          </div>
-   )
+   );
 };
 
 export default Stickers;

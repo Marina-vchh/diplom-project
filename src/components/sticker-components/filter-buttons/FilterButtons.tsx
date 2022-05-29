@@ -6,7 +6,7 @@ interface IFilterButton {
    buttons: IFilterButtons[];
    className: string;
    activeFilter: string;
-   filterChange: ( filter: string ) => void;
+   filterChange: (filter: string) => void;
 };
 
 const FilterButtons = ({ buttons, className, activeFilter, filterChange }: IFilterButton) => {

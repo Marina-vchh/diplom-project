@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { STICKERS } from "../../mock-data";
-import { StickerSelector } from '../../redux/selectors/stickers-selectors/sticker-selector';
+import { StickerSelector } from '../../redux/selectors/stickers-selectors/stickerSelector';
 import { like, addToCart } from '../../redux/actions/stickersActionsCreators/stickersActionsCreators';
 import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
 import StickersCart from "../cart/Cart";
@@ -30,9 +30,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
       [dispatch]
    );
 
-
   const chooseItem = [...stickers].filter((item) => item.id === data.id);
-
    return (
       <div>
          <div className="sticker-choose">

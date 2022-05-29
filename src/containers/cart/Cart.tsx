@@ -1,7 +1,7 @@
 import React, {useCallback} from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import HomeButton from "../../components/common-components/button/HomeButton";
 import Counter from "../counter/Counter";
@@ -17,7 +17,7 @@ const Cart = ({ data : { data } }: ICart) => {
    const dispatch = useDispatch();
 
    const dispatchedRemoveSticker = useCallback(
-      ( id: number ) => dispatch( removeSticker(id) ),
+      (id: number) => dispatch( removeSticker(id) ),
       [dispatch]
   );
 

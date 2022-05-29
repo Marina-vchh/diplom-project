@@ -12,8 +12,8 @@ interface IStickerItem {
    classNameButton: string;
    classNameButtonLike: string;
    isLike: boolean;
-   addToCart: ( id: number ) => void;
-   setLikesArray: ( id: number ) => void;
+   addToCart: (id: number) => void;
+   setLikesArray: (id: number) => void;
 };
 
 const StickerItem = ({ id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray, addToCart }: IStickerItem ) => {

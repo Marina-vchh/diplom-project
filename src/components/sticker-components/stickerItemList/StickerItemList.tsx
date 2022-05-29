@@ -11,8 +11,8 @@ interface IPosts {
    data: IStickers[];
    className: string;
    classNameButton: string;
-   setLikesArray: ( id: number ) => void;
-   addToCart: ( id: number ) => void;
+   setLikesArray: (id: number) => void;
+   addToCart: (id: number) => void;
 }
 
 const StickerItemList = ({ data, className, classNameButton, setLikesArray, addToCart }: IPosts ) => {

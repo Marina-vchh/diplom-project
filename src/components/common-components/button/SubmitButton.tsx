@@ -4,7 +4,7 @@ import "../button/button-css/button.css";
 interface IButton {
    text: string;
    disabled: boolean;
-   onClick: ( e: React.MouseEvent<HTMLButtonElement> ) => void;
+   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const SubmitButton = ({ text, disabled, onClick }: IButton) => {

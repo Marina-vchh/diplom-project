@@ -5,7 +5,7 @@ interface IButton {
    text: string;
    className: string;
    disabled: boolean;
-   addToCart?: ( id: number ) => void;
+   addToCart?: (id: number) => void;
 };
 
 const Button = ({ text, className, disabled, addToCart }: IButton) => {

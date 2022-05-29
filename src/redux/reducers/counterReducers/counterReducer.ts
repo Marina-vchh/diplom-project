@@ -11,5 +11,5 @@ export const counterReducer = (state = initialState, { type, payload }: TCounter
             return state - 1;
         default:
             return state;
-    }
+    };
 };

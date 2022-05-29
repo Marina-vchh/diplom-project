@@ -14,6 +14,5 @@ export const stickerReducer = (state = initialState, { payload, type }: TSticker
             return state.map(sticker => ({ ...sticker, addedToCart: sticker.id === payload.id ? !sticker.addedToCart : sticker.addedToCart }));
         default:
             return state;
-    }
-
+    };
 };

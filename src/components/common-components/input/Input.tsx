@@ -8,11 +8,11 @@ interface IInputProps {
    classNameInput: string;
    type: string;
    value: string;
-   changeValue: ( arg: string ) => void;
+   changeValue: (arg: string) => void;
 }
 
 const Input = ({ id, label, className, classNameInput, type, value, changeValue }: IInputProps) => {
-   const onChange = ( e: React.FormEvent<HTMLInputElement> ) => {
+   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
       const { target } = e;
       const { value } = target as HTMLInputElement;
       if(value) {
@@ -24,11 +24,11 @@ const Input = ({ id, label, className, classNameInput, type, value, changeValue 
       <div className="input-wrapper">
          <label htmlFor={id} className={className}> {label} </label>
             <input 
-            value = {value}
-            id = {id} 
-            type = {type}
-            onChange = {onChange}
-            className = {classNameInput} />
+            value={value}
+            id={id} 
+            type={type}
+            onChange={onChange}
+            className={classNameInput} />
       </div>
    );
 };

@@ -15,13 +15,10 @@ const Form = () => {
    const [apartment, setApartment] = useState("");
    const [suite, setSuite] = useState("");
    const [postcode, setPostcode] = useState("");
-   const [shipping, setShipping] = useState("");
    const [numberCard, setNumberCard] = useState("");
    const [cardHolder, setCardHolder] = useState("");
    const [expiryDate, setExpiryDate] = useState("");
    const [cvcCode, setCvcCode] = useState("");
-   const [inputDirty, setInputDirty] = useState(false);
-   const [inputError, setInputError] = useState("Поле не может быть пустым");
 
    const isValidToSubmit = firstName.length && lastName.length && tel.length && mail.length && country.length && city.length && street.length && apartment.length && suite.length && postcode.length && numberCard.length &&cardHolder.length && expiryDate.length && cvcCode.length;
 
@@ -59,7 +56,7 @@ const Form = () => {
       expiryDate,
       cvcCode)
       clearFields()
-   }
+   };
 
    return (
          <form className="form">
@@ -179,7 +176,7 @@ const Form = () => {
                     disabled={!isValidToSubmit} 
                     onClick={submit} />      
          </form>
-   )
-}
+   );
+};
 
 export default Form;

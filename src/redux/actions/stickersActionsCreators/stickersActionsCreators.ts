@@ -12,14 +12,13 @@ interface IRemoveAction {
     payload: {
         id: number
     };
-}
-
+};
 interface IAddToCartAction {
     type: typeof ADD_TO_CART;
     payload: {
         id: number
     };
-}
+};
 
 export type TStickerActionTypes = ILikeAction | IRemoveAction | IAddToCartAction;
 
@@ -29,7 +28,7 @@ export const like = (id: number): TStickerActionTypes => {
         payload: {
             id
         }
-    }
+    };
 };
 
 export const removeSticker = (id: number): TStickerActionTypes => {
@@ -38,7 +37,7 @@ export const removeSticker = (id: number): TStickerActionTypes => {
         payload: {
             id
         }
-    }
+    };
 };
 
 export const addToCart = (id: number): TStickerActionTypes => {
@@ -47,5 +46,5 @@ export const addToCart = (id: number): TStickerActionTypes => {
         payload: {
             id
         }
-    }
-}
+    };
+};

@@ -6,7 +6,7 @@ interface ISelect {
    classNameSelect: string;
    classNameArrow: string;
    handleSelectActive: () => void;
-   sortStickers: ( stickers: IStickers[], prop: keyof IStickers, dir: boolean ) => IStickers[]
+   sortStickers: (stickers: IStickers[], prop: keyof IStickers, dir: boolean) => IStickers[]
 }
 
 const Select = ({ classNameSelect, classNameArrow, handleSelectActive, sortStickers }: ISelect) => {

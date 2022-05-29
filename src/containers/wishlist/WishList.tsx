@@ -5,7 +5,7 @@ import { removeSticker } from "../../redux/actions/stickersActionsCreators/stick
 import Button from "../../components/common-components/button/Button";
 import HomeButton from "../../components/common-components/button/HomeButton";
 import { useNavigate } from "react-router-dom";
-import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
+import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
 import Title from "../../components/common-components/title/Title";
 import "./wishList.css";
 

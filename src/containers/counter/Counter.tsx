@@ -12,13 +12,13 @@ interface ICounter {
 const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    const [disabled, setDisabled] = useState(false);
 
-   const dispatch = useDispatch();
    const count = useSelector(counterSelector);
+   const dispatch = useDispatch();
 
    const dispatchedIncrement = useCallback(
       () => dispatch(increment()),
       [dispatch]
-  );
+   );
 
    const dispatchedDecrement = useCallback(
       () => dispatch(decrement()),
@@ -26,7 +26,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    );
 
    const isValid = () => {
-      if(count <= 1 ) {
+      if(count <= 1) {
          return setDisabled(true)
       } else {
          setDisabled(false)

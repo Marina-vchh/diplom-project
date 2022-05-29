@@ -12,7 +12,7 @@ interface ICart {
 }
 
 const Cart = ({ data : { data } }: ICart) => {
-   const sticker = useSelector(StickerSelector)
+   const sticker = useSelector(StickerSelector);
 
    const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const Cart = ({ data : { data } }: ICart) => {
       [dispatch]
   );
 
-   const cartItem = [...sticker].filter( ( item ) => item.id === data.id );
+   const cartItem = [...sticker].filter((item) => item.id === data.id);
 
    const navigate = useNavigate();
 

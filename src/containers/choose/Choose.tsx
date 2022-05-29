@@ -30,6 +30,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
    );
 
   const chooseItem = [...stickers].filter((item) => item.id === data.id);
+  
    return (
       <div>
          <div className="sticker-choose">

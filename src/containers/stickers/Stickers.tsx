@@ -4,7 +4,7 @@ import FilterButtons from "../../components/sticker-components/filter-buttons/Fi
 import Select from "../../components/sticker-components/select/Select";
 import { FILTERBUTTONS, STICKERS, IStickers } from "../../mock-data";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
-import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
+import { like, addToCart } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import Button from "../../components/common-components/button/Button";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
@@ -81,12 +81,12 @@ const Stickers = () => {
             <StickerItemList data={filteredStickers}
                              setLikesArray={dispatchedSetLikesArray} 
                              className="sticker-item-list" 
-                             classNameButton="button filled-background sticker-item-button" />
+                             classNameButton="button filled-background sticker-item-button"
+                             addToCart={() => {}} />
 
             <Button text="All stickers" 
                     disabled={false}
-                    className="button transparent-background all-stickers-button"
-                    onClick={() => {}}/> 
+                    className="button transparent-background all-stickers-button" /> 
          </div>
    )
 };

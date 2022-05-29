@@ -12,9 +12,10 @@ interface IPosts {
    className: string;
    classNameButton: string;
    setLikesArray: (id: number) => void;
+   addToCart: (id: number) => void;
 }
 
-const StickerItemList = ({data, className, classNameButton, setLikesArray}: IPosts) => {
+const StickerItemList = ({data, className, classNameButton, setLikesArray, addToCart}: IPosts) => {
    return(
       <div>
       <ul className={className}>
@@ -29,7 +30,8 @@ const StickerItemList = ({data, className, classNameButton, setLikesArray}: IPos
                          classNameButton={classNameButton}
                          classNameButtonLike={isLike ? "button-like button-active": "button-like"}
                          isLike={isLike} 
-                         setLikesArray={setLikesArray}/>
+                         setLikesArray={setLikesArray}
+                         addToCart={addToCart}/>
          )}
          )}
       </ul>

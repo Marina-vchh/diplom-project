@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import Button from "../../components/common-components/button/Button";
+import HomeButton from "../../components/common-components/button/HomeButton";
 import { useNavigate } from "react-router-dom";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
 import Title from "../../components/common-components/title/Title";
@@ -85,8 +86,7 @@ const WishList = () => {
                   </td>
                </tr>
             </table>
-         <Button text="All stickers" 
-                 disabled={false}  
+         <HomeButton text="All stickers"  
                  className="button transparent-background wishList-button" 
                  onClick={goHome} />
          </div>
@@ -95,10 +95,11 @@ const WishList = () => {
       return(
          <>
             <Title text="No like stickers" className="title" />
-            <Button text="All stickers" 
-                    disabled={false} 
+            <Link to="/">
+            <HomeButton text="All stickers" 
                     className="button transparent-background wishList-button" 
                     onClick={goHome} />
+            </Link>
          </>
       ) 
    }

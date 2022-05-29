@@ -3,7 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { STICKERS } from "../../mock-data";
 import { StickerSelector } from '../../redux/selectors/stickers-selectors/sticker-selector';
-import { like } from '../../redux/actions/stickersActionsCreators/stickersActionsCreators';
+import { like, addToCart } from '../../redux/actions/stickersActionsCreators/stickersActionsCreators';
 import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
 import StickersCart from "../cart/Cart";
 import Counter from "../counter/Counter";
@@ -25,6 +25,12 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
       [dispatch]
   );
 
+  const dispatchedAddedToCart = useCallback(
+      (id: number) => dispatch(addToCart(id)),
+      [dispatch]
+   );
+
+
   const chooseItem = [...stickers].filter((item) => item.id === data.id);
 
    return(
@@ -39,8 +45,9 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                               name={item.name}
                               price={item.price}
                               classNameButtonLike={item.isLike ? "button-like button-active": "button-like"}
-                              isLike={item.isLike} 
+                              isLike={item.isLike}
                               setLikesArray={dispatchedSetLike}
+                              addToCart={dispatchedAddedToCart}
                               classNameButton="hidden" />
             ))
          }
@@ -56,7 +63,8 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                   <Link key={item.id} to={`/cartPage/${item.id}`}>
                      <Button disabled={false} 
                              text="Add to cart" 
-                             className="button filled-background choose-button" />
+                             className="button filled-background choose-button"
+                             addToCart={dispatchedAddedToCart}/>
                   </Link>
                )
             })}

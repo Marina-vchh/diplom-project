@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticker-selector";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
-import Button from "../../components/common-components/button/Button";
+import HomeButton from "../../components/common-components/button/HomeButton";
 import Counter from "../counter/Counter";
 import { STICKERS } from "../../mock-data";
 import "./cart.css";
@@ -22,9 +22,11 @@ const Cart = ({data : {data}}: ICart) => {
       [dispatch]
   );
 
-  const cartItem = [...sticker].filter((item) => item.id === data.id);
+   const cartItem = [...sticker].filter((item) => item.id === data.id);
 
-  const navigate = useNavigate();
+   console.log(cartItem)
+
+   const navigate = useNavigate();
 
    const goHome = () => navigate('/', {replace: true});
 
@@ -79,10 +81,9 @@ const Cart = ({data : {data}}: ICart) => {
                </td>
             </tr>
          </table>
-         <Button disabled={false} 
-                 onClick={goHome} 
-                 text="Continue shopping" 
-                 className="button transparent-background cart-button" />
+         <HomeButton onClick={goHome} 
+                     text="Continue shopping" 
+                     className="button transparent-background cart-button" />
        </div>
    )
 };

@@ -1,4 +1,4 @@
-import { LIKE, REMOVE_STICKER } from "../actions"
+import { LIKE, REMOVE_STICKER, ADD_TO_CART } from "../actions"
 
 interface ILikeAction {
     type: typeof LIKE;
@@ -14,7 +14,14 @@ interface IRemoveAction {
     };
 }
 
-export type TStickerActionTypes = ILikeAction | IRemoveAction;
+interface IAddToCartAction {
+    type: typeof ADD_TO_CART;
+    payload: {
+        id: number
+    };
+}
+
+export type TStickerActionTypes = ILikeAction | IRemoveAction | IAddToCartAction;
 
 export const like = (id: number): TStickerActionTypes => {
     return {
@@ -23,11 +30,20 @@ export const like = (id: number): TStickerActionTypes => {
             id
         }
     }
-}
+};
 
 export const removeSticker = (id: number): TStickerActionTypes => {
     return {
         type: REMOVE_STICKER,
+        payload: {
+            id
+        }
+    }
+};
+
+export const addToCart = (id: number): TStickerActionTypes => {
+    return {
+        type: ADD_TO_CART,
         payload: {
             id
         }

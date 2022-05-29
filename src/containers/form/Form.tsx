@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../components/common-components/input/Input";
 import Title from "../../components/common-components/title/Title";
-import Button from "../../components/common-components/button/Button";
+import SubmitButton from "../../components/common-components/button/SubmitButton";
 import './form.css'
 
 const Form = () => {
@@ -175,8 +175,7 @@ const Form = () => {
                            type={"password"}/>
                   </div>
             </div>
-            <Button text="Complete" 
-                    className="button filled-background submit" 
+            <SubmitButton text="Complete" 
                     disabled={!isValidToSubmit} 
                     onClick={submit} />      
          </form>

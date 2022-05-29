@@ -12,10 +12,11 @@ interface IStickerItem {
    classNameButton: string;
    classNameButtonLike: string;
    isLike: boolean;
+   addToCart: (id: number) => void;
    setLikesArray: (id: number) => void;
 };
 
-const StickerItem = ({id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray}: IStickerItem) => {
+const StickerItem = ({id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray, addToCart}: IStickerItem) => {
    return (
       <li className="sticker-item">
             <button className={classNameButtonLike} onClick={() => setLikesArray(id)} />
@@ -28,7 +29,8 @@ const StickerItem = ({id, src, alt, name, price, classNameButton, classNameButto
                      <Button
                         disabled={false}
                         text="add to cart" 
-                        className={classNameButton} />
+                        className={classNameButton}
+                        addToCart={(id: number) => addToCart(id)} />
                 </Link>
             </li>
    )

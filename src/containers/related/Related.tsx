@@ -10,6 +10,7 @@ const Related = () => {
       <div className="related-stickers-wrapper">
          <Title text="Related Products" className="title-thumbnail"/>
          <StickerItemList data={spliceStickers} 
+                          addToCart={() => {}}
                           setLikesArray={() => {}} 
                           className="sticker-item-list__related" 
                           classNameButton="button filled-background related-button" />

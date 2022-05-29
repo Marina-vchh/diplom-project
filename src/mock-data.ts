@@ -44,6 +44,7 @@ export interface IStickers {
    price: number;
    isLike: boolean;
    stock: string;
+   addedToCart: boolean;
 }
 
 export const STICKERS: IStickers[] = [
@@ -55,6 +56,7 @@ export const STICKERS: IStickers[] = [
       price: 1.53,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 2,
@@ -64,6 +66,7 @@ export const STICKERS: IStickers[] = [
       price: 1.57,
       isLike: false,
       stock: "In Stock",
+       addedToCart: false,
    },
    {
       id: 3,
@@ -73,6 +76,7 @@ export const STICKERS: IStickers[] = [
       price: 1.51,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 4,
@@ -82,6 +86,7 @@ export const STICKERS: IStickers[] = [
       price: 1.52,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 5,
@@ -91,6 +96,7 @@ export const STICKERS: IStickers[] = [
       price: 1.58,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 6,
@@ -100,6 +106,7 @@ export const STICKERS: IStickers[] = [
       price: 1.55,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 7,
@@ -109,6 +116,7 @@ export const STICKERS: IStickers[] = [
       price: 1.51,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 8,
@@ -118,6 +126,7 @@ export const STICKERS: IStickers[] = [
       price: 1.55,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    },
    {
       id: 9,
@@ -127,5 +136,6 @@ export const STICKERS: IStickers[] = [
       price: 1.55,
       isLike: false,
       stock: "In Stock",
+      addedToCart: false,
    }
 ];

@@ -1,25 +1,20 @@
 import React from "react";
-import './button.css';
+import '../button/button-css/button.css';;
 
 interface IButton {
    text: string;
    className: string;
    children?: React.ReactNode;
    disabled: boolean;
-   onClick?: (e:React.MouseEvent<HTMLButtonElement> ) => void;
+   addToCart?: (id: number) => void;
 };
 
-const Button = ({ text, className, children, disabled, onClick }: IButton) => {
-   // const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
-   //    if (disabled) {
-   //      e.preventDefault();
-   //    }
-   // }
+const Button = ({ text, className, children, disabled, addToCart}: IButton) => {
    return(
       <button 
          disabled={disabled}
          className={className}
-         onClick={onClick}>
+         onClick={() => addToCart}>
             {text}
             {children}
       </button>

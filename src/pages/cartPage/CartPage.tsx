@@ -29,7 +29,9 @@ const CartPage = () => {
          <LinksComponentCart data={data} />
          <OrderBlock text="Cart Totals" />
          <Link to={"/checkoutPage"}>
-            <Button text="Proceed to checkout" className="button filled-background cart-block-button" />
+            <Button disabled={false}
+                    text="Proceed to checkout" 
+                    className="button filled-background cart-block-button" />
          </Link>
          <Footer />
       </div>

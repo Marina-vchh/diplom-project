@@ -17,9 +17,9 @@ const LayoutCheckoutPage = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <p className="not-active" >
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/cartPage" >
                         Cart
-                    </p>
+                    </NavLink>
                 </li>
                 <li>
                     <p className="active-link">

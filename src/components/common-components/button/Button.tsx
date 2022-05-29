@@ -5,20 +5,21 @@ interface IButton {
    text: string;
    className: string;
    children?: React.ReactNode;
-   disabled?: boolean;
+   disabled: boolean;
    onClick?: (e:React.MouseEvent<HTMLButtonElement> ) => void;
-   onMouseEnter?: () => void;
-   onMouseLeave?: () => void;
 };
 
-const Button = ({ text, className, children, disabled, onClick, onMouseEnter, onMouseLeave }: IButton) => {
+const Button = ({ text, className, children, disabled, onClick }: IButton) => {
+   const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (disabled) {
+        e.preventDefault();
+      }
+   }
    return(
       <button 
          disabled={disabled}
          className={className}
-         onClick={onClick}
-         onMouseEnter={onMouseEnter}
-         onMouseLeave={onMouseLeave}>
+         onClick={onClickAction}>
             {text}
             {children}
       </button>

@@ -30,14 +30,11 @@
 }
 
 .sticker-item-button{
-   position: absolute;
-   top: 70%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 2;
+   display: block;
+   margin: 0 auto;
 }
 
 .sticker-item-button:hover{
-   background-color: #30404D;
+   background-color: #1d4e77;
    color: #fff;
 }

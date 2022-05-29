@@ -75,7 +75,7 @@ const Cart = ({data : {data}}: ICart) => {
                </td>
             </tr>
          </table>
-         <Button onClick={goHome} text="Continue shopping" className="button transparent-background cart-button" />
+         <Button disabled={false} onClick={goHome} text="Continue shopping" className="button transparent-background cart-button" />
        </div>
    )
 };

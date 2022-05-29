@@ -12,7 +12,6 @@ import { StickerSelector } from "../../redux/selectors/stickers-selectors/sticke
 import "./stickers.css"
 
 const Stickers = () => {
-   // const [isHovering, setIsHovering] = useState(false);
    const [isActiveSelect, setIsActiveSelect] = useState(false);
 
    const filter = useSelector(filtersSelector);
@@ -66,6 +65,7 @@ const Stickers = () => {
       return result;
    };
 
+
    return(
       <div className="stickers-field">
          <div className="filter-select-group">
@@ -78,14 +78,15 @@ const Stickers = () => {
                     classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'}
                     sortStickers={sortStickers }/>
          </div>
-         <div>  
             <StickerItemList data={filteredStickers}
                              setLikesArray={dispatchedSetLikesArray} 
                              className="sticker-item-list" 
-                             classNameButton="button transparent-background sticker-item-button" />
-         </div>
+                             classNameButton="button filled-background sticker-item-button" />
+
             <Button text="All stickers" 
-                    className="button filled-background sticker-field-button"/> 
+                    disabled={false}
+                    className="button transparent-background all-stickers-button"
+                    onClick={() => {}}/> 
          </div>
    )
 };

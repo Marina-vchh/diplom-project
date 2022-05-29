@@ -22,6 +22,7 @@ function App() {
           <Route path="/cartPage/:id" element={<CartPage />} />
         </Route>
         <Route path="/" element={<LayoutCheckoutPage />} >
+          <Route path="/cartPage/:id" element={<CartPage />} />
           <Route path="/checkoutPage" element={<CheckoutPage />} />
         </Route>
           <Route path="/wishListPage" element={<WishListPage />} />

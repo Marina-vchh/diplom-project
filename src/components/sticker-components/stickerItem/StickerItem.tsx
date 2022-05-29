@@ -15,7 +15,7 @@ interface IStickerItem {
    setLikesArray: (id: number) => void;
 };
 
-const StickerItem = ({id, src, alt, name, price, classNameButton, isLike, classNameButtonLike, setLikesArray}: IStickerItem) => {
+const StickerItem = ({id, src, alt, name, price, classNameButton, classNameButtonLike, setLikesArray}: IStickerItem) => {
    return (
       <li className="sticker-item">
             <button className={classNameButtonLike} onClick={() => setLikesArray(id)} />
@@ -26,6 +26,7 @@ const StickerItem = ({id, src, alt, name, price, classNameButton, isLike, classN
             </div>
                 <Link key={id} to={`/stickerPage/${id}`}> 
                      <Button
+                        disabled={false}
                         text="add to cart" 
                         className={classNameButton} />
                 </Link>

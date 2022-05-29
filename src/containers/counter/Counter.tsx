@@ -26,8 +26,8 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    );
 
    const isValid = () => {
-      if(count <= 0 ) {
-         setDisabled(true)
+      if(count <= 1 ) {
+         return setDisabled(true)
       } else {
          setDisabled(false)
          dispatchedDecrement()

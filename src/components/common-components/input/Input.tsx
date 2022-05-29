@@ -7,12 +7,10 @@ interface IInputProps {
    className: string,
    type: string,
    value: string,
-   pattern: string
-   changeValue: (arg: string) => void;
-   onBlur: (e: React.ChangeEvent<HTMLInputElement>) => void;
+   changeValue: (arg: string) => void,
 }
 
-const Input = ({id, label, className, type, value, pattern, changeValue, onBlur}: IInputProps) => {
+const Input = ({ id, label, className, type, value, changeValue }: IInputProps) => {
    const onChange = (e: React.FormEvent<HTMLInputElement>) => {
       const { target } = e;
       const { value } = target as HTMLInputElement;
@@ -25,11 +23,9 @@ const Input = ({id, label, className, type, value, pattern, changeValue, onBlur}
       <div className="input-wrapper">
          <label htmlFor={id} className={className}>{label}</label>
             <input 
-            onBlur={onBlur}
             value={value}
             id={id} 
             type={type}
-            pattern={pattern}
             onChange={onChange}
             className={'input'} />
       </div>

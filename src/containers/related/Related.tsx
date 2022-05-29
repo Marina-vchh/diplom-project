@@ -9,7 +9,7 @@ const Related = () => {
    return(
       <div className="related-stickers-wrapper">
          <Title text="Related Products" className="title-thumbnail"/>
-         <StickerItemList data={spliceStickers} setLikesArray={() => {}} className="sticker-item-list__related" classNameButton="hidden" />
+         <StickerItemList data={spliceStickers} setLikesArray={() => {}} className="sticker-item-list__related" classNameButton="button filled-background related-button" />
       </div>
    );
 };

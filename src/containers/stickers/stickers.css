@@ -12,7 +12,14 @@
    margin-bottom: 40px;
 }
 
-.sticker-field-button{
+.all-stickers-button{
    margin: 0 auto;
 }
+
+@media(max-width: 767px) {
+   .filter-select-group {
+      display: block;
+   }
+}
+
 

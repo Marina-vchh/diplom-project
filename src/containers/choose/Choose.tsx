@@ -52,7 +52,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
             {chooseItem.map((item: any) => {
                return(
                   <Link key={item.id} to={`/cartPage/${item.id}`}>
-                     <Button text="Add to cart" className="button filled-background choose-button" />
+                     <Button disabled={false} text="Add to cart" className="button filled-background choose-button" />
                   </Link>
                )
             })}

@@ -46,4 +46,10 @@
    display: block;
 }
 
+.title {
+   text-align: center;
+   color: #30404D;
+   font-size: 32px;
+   margin-bottom: 80px;
+}
 

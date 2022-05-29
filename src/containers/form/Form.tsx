@@ -23,7 +23,7 @@ const Form = () => {
    const [inputDirty, setInputDirty] = useState(false);
    const [inputError, setInputError] = useState("Поле не может быть пустым");
 
-   const isValidToSubmit = firstName.length;
+   const isValidToSubmit = firstName.length && lastName.length && tel.length && mail.length && country.length && city.length && street.length && apartment.length && suite.length && postcode.length && numberCard.length &&cardHolder.length && expiryDate.length && cvcCode.length;
 
    function clearFields () {
       setFirstName("");
@@ -44,12 +44,24 @@ const Form = () => {
 
    function submit (e:React.MouseEvent<HTMLButtonElement>) {
       e.preventDefault();
-      console.log(firstName);
-      clearFields();
+      console.log(firstName,
+      lastName,
+      tel,
+      mail,
+      country,
+      city,
+      street,
+      apartment,
+      suite,
+      postcode,
+      numberCard,
+      cardHolder,
+      expiryDate,
+      cvcCode)
+      clearFields()
    }
 
    return (
-      <div className="body">
          <form className="form">
             <div className=" wrapper personal-wrapper">
                <Title text="Personal information" className="title-thin" />
@@ -57,27 +69,30 @@ const Form = () => {
                         changeValue={setFirstName} 
                         id={'name'} 
                         label = {'First Name'} 
-                        className={'label'} 
+                        className={'label'}
+                        classNameInput={"input"}
                         type={'text'}/>
                   <Input value={lastName} 
                          changeValue={setLastName}
                          id={'name'} 
-                         label = {'Last Name'} 
+                         label = {'Last Name'}
+                         classNameInput={"input"}
                          className={'label'} 
                          type={'text'}/>
                   <Input value={tel} 
                          changeValue={setTel} 
                          id={'tel'} 
                          label={'Phone'} 
-                         className={'label'} 
+                         className={'label'}
+                         classNameInput={"input"} 
                          type={'tel'}/>
                   <Input value={mail} 
                          changeValue={setMail} 
                          id={'mail'} 
                          label = {'Email'} 
-                         className={'label'} 
+                         className={'label'}
+                         classNameInput={"input"} 
                          type={'email'}/>
-                  <Title text="Shipping" className="title-thin" />
             </div>
              <div className="wrapper address-wrapper">
                <Title text="Address" className="title-thin" />
@@ -86,38 +101,46 @@ const Form = () => {
                   changeValue={setCountry} 
                   id={"country"} 
                   label={"Country"} 
-                  className={"label"} 
+                  className={"label"}
+                  classNameInput={"input"}
                   type={"text"}/>
                   <Input value={city} 
                          changeValue={setCity} 
                          id={"city"} 
                          label = {"City"} 
-                         className={"label"} 
+                         className={"label"}
+                         classNameInput={"input"} 
                          type={"text"}/>
                   <Input value={street} 
                          changeValue={setStreet} 
                          id={"street"} 
                          label={"Street"} 
-                         className={"label"} 
+                         className={"label"}
+                         classNameInput={"input"} 
                          type={"tel"}/>
-                  <Input value={apartment} 
+                  <div className="input-group">
+                     <Input value={apartment} 
                          changeValue={setApartment} 
                          id={"apartment"} 
                          label={"Apartment"} 
-                         className={"label"} 
+                         className={"label"}
+                         classNameInput={"input input-small"}
                          type={"email"}/>
-                  <Input value={suite} 
-                         changeValue={setSuite} 
-                         id={"suite"} 
-                         label={"Suite"}
-                         className={"label"} 
-                         type={"email"}/>
+                     <Input value={suite} 
+                           changeValue={setSuite} 
+                           id={"suite"} 
+                           label={"Suite"}
+                           className={"label label-small"}
+                           classNameInput={"input input-small"} 
+                           type={"email"}/>
+                  </div>
                   <Input value={postcode} 
-                         changeValue={setPostcode} 
-                         id={"postcode"} 
-                         label={"Postcode"} 
-                         className={"label"} 
-                         type={"email"}/>
+                        changeValue={setPostcode} 
+                        id={"postcode"} 
+                        label={"Postcode"} 
+                        className={"label"}
+                        classNameInput={"input input-small"} 
+                        type={"email"}/>
              </div>
             <div className="wrapper payment-wrapper">
                <Title text="Payment details" className="title-thin" />
@@ -125,33 +148,38 @@ const Form = () => {
                          changeValue={setNumberCard} 
                          id={"numberCard"} 
                          label = {"NumberCard"} 
-                         className={"label"} 
+                         className={"label"}
+                         classNameInput={"input"} 
                          type={"tel"}/>
                   <Input value={cardHolder} 
                          changeValue={setCardHolder} 
                          id={"cardHolder"} 
                          label = {"CardHolder"} 
-                         className={"label"} 
+                         className={"label"}
+                         classNameInput={"input"}
                          type={"tel"}/>
-                  <Input value={expiryDate} 
-                         changeValue={setExpiryDate} 
-                         id={"expiryDate"} 
-                         label={"ExpiryDate"} 
-                         className={"label"} 
-                         type={"tel"}/>
-                  <Input value={cvcCode} 
-                         changeValue={setCvcCode} 
-                         id={"cvcCode"} 
-                         label={"CvcCode"} 
-                         className={"label"} 
-                         type={"tel"}/>
+                  <div className="input-group">
+                     <Input value={expiryDate} 
+                           changeValue={setExpiryDate} 
+                           id={"expiryDate"} 
+                           label={"ExpiryDate"} 
+                           className={"label"}
+                           classNameInput={"input input-small"}
+                           type={"tel"}/>
+                     <Input value={cvcCode} 
+                           changeValue={setCvcCode} 
+                           id={"cvcCode"} 
+                           label={"CvcCode"} 
+                           className={"label label-small"}
+                           classNameInput={"input input-small"}
+                           type={"password"}/>
+                  </div>
             </div>
             <Button text="Complete" 
                     className="button filled-background submit" 
                     disabled={!isValidToSubmit} 
                     onClick={submit} />      
          </form>
-      </div>
    )
 }
 

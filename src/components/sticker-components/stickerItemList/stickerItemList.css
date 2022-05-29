@@ -7,7 +7,7 @@
    row-gap: 40px;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 992px) {
    .sticker-item-list {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -16,8 +16,8 @@
 
 @media(max-width: 767px) {
    .sticker-item-list {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
    }
 }
 

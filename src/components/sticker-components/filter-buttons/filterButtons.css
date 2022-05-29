@@ -33,3 +33,19 @@
    color: #fff;
    background-color: #C1C4C6;
 }
+
+@media(max-width: 767px) {
+   .filter-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      row-gap: 20px;
+   }
+   .filter-button {
+      width: 110px;
+   }
+
+   .filter-button:last-child {
+      grid-column: 2/3;
+   }
+}

@@ -46,3 +46,17 @@ li {
 .sticker-item-in-table {
    display: flex;
 }
+
+@media(max-width: 992px) {
+   .sticker-choose {
+      padding: 20px;
+      column-gap: 100px;
+	}
+}
+
+@media(max-width: 767px) {
+   .sticker-choose {
+      padding: 20px;
+      column-gap: 20px;
+	}
+}

@@ -5,3 +5,10 @@
    padding: 20px 100px;
    background-color: #EBEBEB;
 }
+
+
+@media(max-width: 767px) {
+   .footer {
+      padding: 20px;
+	}
+}

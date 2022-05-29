@@ -37,7 +37,7 @@ const Form = () => {
       setCardHolder("");
       setExpiryDate("");
       setCvcCode("");
-   }
+   };
 
    function submit (e:React.MouseEvent<HTMLButtonElement>) {
       e.preventDefault();

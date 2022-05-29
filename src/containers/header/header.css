@@ -38,3 +38,9 @@
 .header-icon-store:hover {
    background-image: url(../../img/header-icons//header-store-hover.svg);
 }
+
+@media(max-width: 767px) {
+   .header {
+      padding: 20px;
+	}
+}

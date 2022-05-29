@@ -9,7 +9,7 @@ const LayoutCartPage = () => {
             <Background titleText="Cart" className="background background-cart" />
             <ul className="layout">
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickers">
                         Home
                     </NavLink>
                 </li>

@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { STICKERS } from "../../mock-data";
 import { StickerSelector } from '../../redux/selectors/stickers-selectors/stickerSelector';
 import { like, addToCart } from '../../redux/actions/stickersActionsCreators/stickersActionsCreators';
 import StickerItem from "../../components/sticker-components/stickerItem/StickerItem";
@@ -58,7 +57,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
                      classNameButton="sticker-choose-counter-button" />
             {chooseItem.map((item: any) => {
                return (
-                  <Link key={item.id} to={`/cartPage/${item.id}`}>
+                  <Link key={item.id} to={`/cart/${item.id}`}>
                      <Button disabled={false} 
                              text="Add to cart" 
                              className="button filled-background choose-button"

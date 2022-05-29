@@ -34,7 +34,7 @@ const CartPage = () => {
       <div className="cart-page">
          <HocComponentCart data={data} />
          <OrderBlock text="Cart Totals" />
-         <Link to={"/checkoutPage"}>
+         <Link to={"/checkout"}>
             <Button disabled={false}
                     text="Proceed to checkout" 
                     className="button filled-background cart-block-button" />

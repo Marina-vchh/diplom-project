@@ -10,7 +10,7 @@ const LayoutChoosePage = () => {
             <Background titleText="Shop" className="background background-choose" />
             <ul className="layout">
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickers">
                         Home
                     </NavLink>
                 </li>

@@ -18,7 +18,7 @@ const SubmitButton = ({ text, disabled, onClick }: IButton) => {
    return (
       <button 
          disabled={disabled}
-         className="button filled-background"
+         className="button filled-background submit"
          onClick={ onClickAction }>
             {text}
       </button>

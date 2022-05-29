@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LayoutChoosePage from "./components/common-components/layouts/LayoutChoosePage";
 import LayoutCartPage from "./components/common-components/layouts/LayoutCartPage";
 import LayoutCheckoutPage from "./components/common-components/layouts/LayoutCheckoutPage";
@@ -13,19 +13,19 @@ function App() {
   return (
     <Routes>
         <Route path= "/" element={<StickerPage />} />
-        <Route path="/stickerPage" element={<StickerPage />} />
-        <Route path="/" element={<LayoutChoosePage />} >
-          <Route path="/" element={<Navigate replace to="/stickerPage" />} />
-          <Route path="/stickerPage/:id" element={<ChoosePage />} />
+        <Route path="/stickers" element={<StickerPage />} />
+        <Route element={<LayoutChoosePage />} >
+          <Route path="/stickers/:id" element={<ChoosePage />} />
         </Route>
-        <Route path="/" element={<LayoutCartPage />} >
-          <Route path="/cartPage/:id" element={<CartPage />} />
+        <Route element={<LayoutCartPage />} >
+          <Route path="/cart/:id" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
-        <Route path="/" element={<LayoutCheckoutPage />} >
-          <Route path="/cartPage/:id" element={<CartPage />} />
-          <Route path="/checkoutPage" element={<CheckoutPage />} />
+        <Route element={<LayoutCheckoutPage />} >
+          <Route path="/cart" element={<CartPage />} />
         </Route>
-          <Route path="/wishListPage" element={<WishListPage />} />
+          <Route path="/wishList" element={<WishListPage />} />
+          <Route path="/cart" element={<CartPage />} />
     </Routes>
   )
 }

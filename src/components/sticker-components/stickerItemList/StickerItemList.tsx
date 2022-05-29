@@ -1,8 +1,6 @@
-import React, {useState, useCallback} from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Button from "../../common-components/button/Button";
-import { Link, NavLink, Route, Routes } from 'react-router-dom';
-import { IStickers, STICKERS } from "../../../mock-data";
+import React from "react";
+import { Route, Routes } from 'react-router-dom';
+import { IStickers } from "../../../mock-data";
 import StickerChoose from "../../../containers/choose/Choose";
 import StickerItem from "../stickerItem/StickerItem";
 import './stickerItemList.css';
@@ -19,7 +17,7 @@ const StickerItemList = ({ data, className, classNameButton, setLikesArray, addT
    return(
       <div>
       <ul className={ className }>
-         {data.map(( { id, src, alt, name, price, isLike} ) => {
+         {data.map(( { id, src, alt, name, price, isLike } ) => {
          return (
             <StickerItem id={id}
                          key={id}

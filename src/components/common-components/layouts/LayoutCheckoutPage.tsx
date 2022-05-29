@@ -9,12 +9,12 @@ const LayoutCheckoutPage = () => {
             <Background titleText="Checkout" className="background background-checkout" />
             <ul className="layout">
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickerPage">
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/stickers">
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/cartPage" >
+                    <NavLink className={(navData) => navData.isActive ? 'not-active' : 'not-active' } to="/cart" >
                         Cart
                     </NavLink>
                 </li>

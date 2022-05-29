@@ -85,3 +85,15 @@
    background-image: url(../../img//delete-button//deleteHover.svg);
 }
 
+@media(max-width: 992px) {
+   .cart-wrapper  {
+      padding: 50px;
+   }
+}
+
+@media(max-width: 762px) {
+   .cart-wrapper  {
+         padding: 20px;
+	}
+}
+

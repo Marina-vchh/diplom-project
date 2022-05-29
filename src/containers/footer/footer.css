@@ -6,6 +6,11 @@
    background-color: #EBEBEB;
 }
 
+@media(max-width: 992px) {
+   .footer  {
+      padding: 20px 50px;
+   }
+}
 
 @media(max-width: 767px) {
    .footer {

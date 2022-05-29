@@ -42,3 +42,15 @@
 .submit {
    width: 100%;
 }
+
+@media(max-width: 992px) {
+   .button-table {
+      font-size: 16px;
+   }
+}
+
+@media(max-width: 762px) {
+   .button-table  {
+      padding: 5px;
+	}
+}

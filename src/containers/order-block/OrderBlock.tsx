@@ -10,9 +10,9 @@ interface IOrderBlock {
 
 const OrderBlock = ({ text }: IOrderBlock) => {
    const count = useSelector(counterSelector);
-   
+
    return (
-      <div className="cart-block">
+      <div className="order-block">
          <table>
             <tr>
                <Title text={text} className="title-thumbnail title-cart" />

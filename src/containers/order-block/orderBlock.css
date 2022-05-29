@@ -1,4 +1,4 @@
-.cart-block {
+.order-block {
    max-width: 250px;
    width: 100%;
    padding: 0 100px;
@@ -25,4 +25,17 @@
    font-size: 18px;
    color: #143550;
    text-align: left;
+}
+
+@media(max-width: 992px) {
+   .order-block {
+      padding: 0 50px;
+   }
+
+@media(max-width: 762px) {
+   .order-block {
+         padding: 0 20px;
+         margin: 0 auto;
+	   }
+   }
 }

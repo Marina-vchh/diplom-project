@@ -68,14 +68,14 @@ const WishList = () => {
                               <Button  
                                  disabled={false}
                                  text="add to cart" 
-                                 className={"button transparent-background"} />
+                                 className={"button transparent-background button-table"} />
                            </Link>)
                   })
                   }  
                   </td>
                   <td className="table-column">
                      {
-                        likedStickers.map((item: any) => {
+                        likedStickers.map((item) => {
                            return (
                               <button className="delete-button" onClick={() => dispatchedRemoveSticker} />)
                         })

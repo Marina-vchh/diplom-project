@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
-import Button from "../../components/common-components/button/Button";
+import AddToCartButton from "../../components/common-components/button/AddToCartButton";
 import HomeButton from "../../components/common-components/button/HomeButton";
 import { useNavigate } from "react-router-dom";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
@@ -65,10 +65,12 @@ const WishList = () => {
                      {likedStickers.map((item: any) => {
                         return (
                            <Link key={item.id} to={`/stickerPage/${item.id}`}> 
-                              <Button  
+                              <AddToCartButton  
+                                 id={item.id}
                                  disabled={false}
                                  text="add to cart" 
-                                 className={"button transparent-background button-table"} />
+                                 className={"button transparent-background button-table"}
+                                 addToCart={() => {}} />
                            </Link>)
                   })
                   }  

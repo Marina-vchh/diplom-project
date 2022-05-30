@@ -4,11 +4,12 @@ import FilterButtons from "../../components/sticker-components/filter-buttons/Fi
 import Select from "../../components/sticker-components/select/Select";
 import { FILTERBUTTONS, IStickers } from "../../mock-data";
 import { changeFilter } from "../../redux/actions/filterActionsCreators/filterActionCreators";
-import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
+import { like, addToCart } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSelectors";
 import Button from "../../components/common-components/button/Button";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
+import HomeButton from "../../components/common-components/button/HomeButton";
 import "./stickers.css"
 
 const Stickers = () => {
@@ -28,6 +29,11 @@ const Stickers = () => {
       (filter: string) => dispatch(changeFilter(filter)),
       [dispatch]
   );
+
+  const dispatchedAddedToCart = useCallback(
+   (id: number) => dispatch(addToCart(id)),
+   [dispatch]
+);
 
    const filterStickers = useCallback((stickers: IStickers[]) => {
       switch (filter) {
@@ -81,11 +87,12 @@ const Stickers = () => {
                              setLikesArray={dispatchedSetLikesArray} 
                              className="sticker-item-list" 
                              classNameButton="button filled-background sticker-item-button"
-                             addToCart={() => {}} />
+                             addToCart={dispatchedAddedToCart} />
 
-            <Button text="All stickers" 
-                    disabled={false}
-                    className="button transparent-background all-stickers-button" /> 
+            <HomeButton
+                    text="All stickers" 
+                    className="button transparent-background all-stickers-button"
+                    onClick={() => {}} /> 
          </div>
    );
 };

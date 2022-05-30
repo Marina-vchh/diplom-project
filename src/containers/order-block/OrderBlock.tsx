@@ -6,16 +6,17 @@ import "./orderBlock.css";
 
 interface IOrderBlock {
    text: string;
+   classNameTitle: string;
 };
 
-const OrderBlock = ({ text }: IOrderBlock) => {
+const OrderBlock = ({ text, classNameTitle }: IOrderBlock) => {
    const count = useSelector(counterSelector);
 
    return (
       <div className="order-block">
          <table>
             <tr>
-               <Title text={text} className="title-thumbnail title-cart" />
+               <Title text={text} className={classNameTitle} />
             </tr>
             <tr>
                <td className="order-block__text">Subtotal</td>

@@ -5,6 +5,10 @@
    margin: 0 auto;
 }
 
+.title-checkout {
+   display: none;
+}
+
 @media(max-width: 762px) {
    .checkout-page-wrapper {
       display: block;

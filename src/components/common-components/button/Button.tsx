@@ -4,16 +4,11 @@ import "../button/button-css/button.css";
 interface IButton {
    text: string;
    className: string;
-   disabled: boolean;
-   addToCart?: (id: number) => void;
 };
 
-const Button = ({ text, className, disabled, addToCart }: IButton) => {
+const Button = ({ text, className }: IButton) => {
    return (
-      <button 
-         disabled = {disabled}
-         className = {className}
-         onClick = {() => addToCart}>
+      <button className = {className}>
             {text}
       </button>
    );

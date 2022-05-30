@@ -7,7 +7,7 @@ import StickerItem from "../../components/sticker-components/stickerItem/Sticker
 import StickersCart from "../cart/Cart";
 import Counter from "../counter/Counter";
 import Title from "../../components/common-components/title/Title";
-import Button from "../../components/common-components/button/Button";
+import AddToCartButton from '../../components/common-components/button/AddToCartButton';
 import "./choose.css";
 
 interface IChooseStickers {
@@ -30,7 +30,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
    );
 
   const chooseItem = [...stickers].filter((item) => item.id === data.id);
-  
+
    return (
       <div>
          <div className="sticker-choose">
@@ -59,7 +59,8 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
             {chooseItem.map((item: any) => {
                return (
                   <Link key={item.id} to={`/cart/${item.id}`}>
-                     <Button disabled={false} 
+                     <AddToCartButton id={item.id}
+                             disabled={false} 
                              text="Add to cart" 
                              className="button filled-background choose-button"
                              addToCart={dispatchedAddedToCart}/>

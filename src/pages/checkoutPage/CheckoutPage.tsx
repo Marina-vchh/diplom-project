@@ -9,7 +9,7 @@ const CheckoutPage = () => {
       <>
          <div className="checkout-page-wrapper">
             <Form />
-            <OrderBlock text="Your Order" />
+            <OrderBlock text="Your Order" classNameTitle="title-thumbnail title-checkout" />
          </div>
          <Footer />
       </>

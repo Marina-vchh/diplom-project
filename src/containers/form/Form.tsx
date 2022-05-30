@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Input from "../../components/common-components/input/Input";
 import Title from "../../components/common-components/title/Title";
 import SubmitButton from "../../components/common-components/button/SubmitButton";
-import './form.css'
+import "./form.css"
 
 const Form = () => {
    const [firstName, setFirstName] = useState("");

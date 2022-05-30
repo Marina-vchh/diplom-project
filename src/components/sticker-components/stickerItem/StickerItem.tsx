@@ -27,10 +27,8 @@ const StickerItem = ({ id, src, alt, name, price, classNameButton, classNameButt
             </div>
                 <Link key={id} to={`/stickers/${id}`}> 
                      <Button
-                        disabled={false}
                         text="add to cart" 
-                        className={ classNameButton }
-                        addToCart={(id: number) => addToCart(id)} />
+                        className={ classNameButton } />
                 </Link>
             </li>
    );

@@ -40,12 +40,12 @@ const Cart = ({ data : { data } }: ICart) => {
             <tr>
                <td className="table-column">
                   {
-                     cartItem.map(( item ) => {
+                     cartItem.map((item) => {
                         return (
                            <div className="product-name-group">
                               <img className="sticker-item-img-in-table" 
-                                   src={ item.src } alt={ item.alt } />
-                              <p className="table-column-text">{ item.name }</p>
+                                   src={item.src} alt={item.alt} />
+                              <p className="table-column-text">{item.name}</p>
                            </div>
                         )
                      })
@@ -73,8 +73,14 @@ const Cart = ({ data : { data } }: ICart) => {
                   }
                </td>
                <td className="table-column-header">
-                  <button className="delete-button" 
-                          onClick={() => dispatchedRemoveSticker} />
+               {
+                  cartItem.map((item) => {
+                     return (
+                           <button className="delete-button" 
+                           onClick={() => {dispatchedRemoveSticker(item.id)}} />
+                        )
+                     })
+                  }
                </td>
             </tr>
          </table>

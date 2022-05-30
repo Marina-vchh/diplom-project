@@ -16,10 +16,9 @@ const Cart = ({ data : { data } }: ICart) => {
 
    const dispatch = useDispatch();
 
-   const dispatchedRemoveSticker = useCallback(
-      (id: number) => dispatch( removeSticker(id) ),
-      [dispatch]
-  );
+   const dispatchedRemoveSticker = (id: number) => {
+      return dispatch(removeSticker(id))
+   };
 
    const cartItem = [...sticker].filter((item) => item.id === data.id);
 

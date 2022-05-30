@@ -15,15 +15,13 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    const count = useSelector(counterSelector);
    const dispatch = useDispatch();
 
-   const dispatchedIncrement = useCallback(
-      () => dispatch(increment()),
-      [dispatch]
-   );
+   const dispatchedIncrement = (id: number) => {
+      return dispatch(increment())
+   };
 
-   const dispatchedDecrement = useCallback(
-      () => dispatch(decrement()),
-      [dispatch]
-   );
+   const dispatchedDecrement = () => {
+      return dispatch(decrement())
+   };
 
    const isValid = () => {
       if(count <= 1) {

@@ -15,7 +15,7 @@ const Counter = ({ className, classNameCount, classNameButton }: ICounter) => {
    const count = useSelector(counterSelector);
    const dispatch = useDispatch();
 
-   const dispatchedIncrement = (id: number) => {
+   const dispatchedIncrement = () => {
       return dispatch(increment())
    };
 

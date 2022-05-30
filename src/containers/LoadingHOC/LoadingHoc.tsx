@@ -1,7 +1,7 @@
 import React from 'react';
 import "./loading.css"
 
-const isEmpty = (prop: any) => (
+const isEmpty = (prop: null | undefined | IResult[]) => (
     prop === null ||
     prop === undefined ||
     (prop.hasOwnProperty('length') && prop.length === 0) ||

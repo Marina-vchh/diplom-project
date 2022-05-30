@@ -1,16 +1,15 @@
-import React, {useCallback} from "react";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { like } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
 import Title from "../../components/common-components/title/Title";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
-import { STICKERS } from "../../mock-data";
 import "./related.css"
 
 const Related = () => {
    const stickers = useSelector(StickerSelector);
    const dispatch = useDispatch();
-   
+
    const spliceStickers = [...stickers].splice(0, 3);
 
    const dispatchedSetLikesArray = useCallback(

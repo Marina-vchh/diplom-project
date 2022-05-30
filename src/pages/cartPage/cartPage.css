@@ -10,13 +10,13 @@
 }
 
 @media(max-width: 992px) {
-   .cart-block-button  {
+   .cart-block-button {
       margin-right: 50px;
    }
 }
 
 @media(max-width: 762px) {
-      .cart-block-button  {
+      .cart-block-button {
          margin-right: 20px;
       }
    }

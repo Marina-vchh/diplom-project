@@ -9,7 +9,6 @@ import { filtersSelector } from "../../redux/selectors/filter-selectors/filterSe
 import Button from "../../components/common-components/button/Button";
 import StickerItemList from "../../components/sticker-components/stickerItemList/StickerItemList";
 import { StickerSelector } from "../../redux/selectors/stickers-selectors/stickerSelector";
-import HomeButton from "../../components/common-components/button/HomeButton";
 import "./stickers.css"
 
 const Stickers = () => {
@@ -89,10 +88,8 @@ const Stickers = () => {
                              classNameButton="button filled-background sticker-item-button"
                              addToCart={dispatchedAddedToCart} />
 
-            <HomeButton
-                    text="All stickers" 
-                    className="button transparent-background all-stickers-button"
-                    onClick={() => {}} /> 
+            <Button text="All stickers" 
+                    className="button transparent-background all-stickers-button" /> 
          </div>
    );
 };

@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeSticker } from "../../redux/actions/stickersActionsCreators/stickersActionsCreators";
@@ -23,7 +23,7 @@ const WishList = () => {
 
    const goHome = () => navigate('/', {replace: true});
 
-   if(likedStickers.length > 0) {
+   if (likedStickers.length > 0) {
       return(
          <div className="wishlist">
             <table className="table-wishlist">

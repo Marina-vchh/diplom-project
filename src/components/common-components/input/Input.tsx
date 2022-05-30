@@ -15,7 +15,7 @@ const Input = ({ id, label, className, classNameInput, type, value, changeValue 
    const onChange = (e: React.FormEvent<HTMLInputElement>) => {
       const { target } = e;
       const { value } = target as HTMLInputElement;
-      if(value) {
+      if (value) {
          changeValue(value);
       }
    }

@@ -13,13 +13,13 @@
 }
 
 @media(max-width: 992px) {
-   .sticker-item-list__related  {
+   .sticker-item-list__related {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr;
 	}
 
 @media(max-width: 762px) {
-   .sticker-item-list__related  {
+   .sticker-item-list__related {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr;
 	   }

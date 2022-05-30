@@ -49,15 +49,15 @@
    position: absolute;
    right: 40px;
    top: 40px;
-   background-image: url(../../../img//heart//heart.svg);
+   background-image: url("../../../img//heart//heart.svg");
    background-color: transparent;
    transition: all .3s linear;
 }
 
 .button-item:hover {
-   background-image: url(../../../img//heart/heart-hover.svg);
+   background-image: url("../../../img//heart/heart-hover.svg");
 }
 
 .button-active {
-   background-image: url(../../../img//heart//heart-active.svg);
+   background-image: url("../../../img//heart//heart-active.svg");
 }

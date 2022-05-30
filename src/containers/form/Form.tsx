@@ -41,21 +41,7 @@ const Form = () => {
 
    function submit (e:React.MouseEvent<HTMLButtonElement>) {
       e.preventDefault();
-      console.log(firstName,
-      lastName,
-      tel,
-      mail,
-      country,
-      city,
-      street,
-      apartment,
-      suite,
-      postcode,
-      numberCard,
-      cardHolder,
-      expiryDate,
-      cvcCode)
-      clearFields()
+      clearFields();
    };
 
    return (

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Icon from "../../components/common-components/icon/Icon";
-import Logo from "../../components/common-components/logo/Logo";
+import { ReactComponent as ReactLogo } from "../../../img/logo/logo-header.svg";
 import "./header.css";
 
 const Header = () => {
    return (
       <div className="header">
-         <Logo />
+         <ReactLogo />
          <div className="icons">
             <Icon> 
                <button className="header-icon-button header-icon-loop"></button>

@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { counterSelector } from "../../redux/selectors/counter-selectors/counterSelectors";
 import { increment, decrement } from "../../redux/actions/counterActionCreators/counterActionCreator";

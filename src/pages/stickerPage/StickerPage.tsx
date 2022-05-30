@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Background from "../../containers/background/Background";
 import Stickers from "../../containers/stickers/Stickers";
 import Footer from "../../containers/footer/Footer";
-import "./stickerPage.css";
 
 const StickerPage = () => {
    return (

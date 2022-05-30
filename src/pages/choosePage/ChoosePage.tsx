@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../containers/footer/Footer";
 import { HocComponentChoose } from "../../components/common-components/HocComponent";
@@ -16,7 +16,7 @@ interface IResult {
 };
 
 const ChoosePage = () => {
-   const {id} = useParams();
+   const { id } = useParams();
    const [data, setData] = useState<IChooseStickers | null>(null);
 
     useEffect(() => {

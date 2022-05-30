@@ -63,12 +63,14 @@ const Stickers = () => {
      }
    };
 
-   const sortStickers = (data: IStickers[], prop: keyof IStickers, dir: boolean = false) => {
+   const sortStickers = useCallback((data: IStickers[], prop: keyof IStickers, dir: boolean = false) => {
       let result = data.sort(function(a, b): any{
          if((dir === false) ? a[prop] < b[prop] : a[prop] > b[prop]) return -1;
       });
       return result;
-   };
+   }, [stickers, Object.keys(stickers), false]);
+
+   const sortedStickers = useMemo(() => sortStickers(stickers, Object.keys(stickers), false), [stickers, sortStickers])
 
    return(
       <div className="stickers-field">
@@ -80,7 +82,7 @@ const Stickers = () => {
             <Select handleSelectActive={handleSelectActive} 
                     classNameSelect={isActiveSelect ? 'select-body' : 'hidden'} 
                     classNameArrow={isActiveSelect ?  'select__icon select__icon__up' : 'select__icon__down'}
-                    sortStickers={sortStickers }/>
+                    sortStickers={sortStickers}/>
          </div>
             <StickerItemList data={filteredStickers}
                              setLikesArray={dispatchedSetLikesArray} 

@@ -4,7 +4,7 @@ import { ReactComponent as TwitterIcon } from "../../img/footer-icons/twitter.sv
 import { ReactComponent as WhatsUpIcon } from "../../img/footer-icons/whatsUp.svg";
 import { ReactComponent as TelegramIcon } from "../../img/footer-icons/telegram.svg";
 import { ReactComponent as FacebookIcon } from "../../img/footer-icons/facebook.svg";
-import { ReactComponent as ReactLogo } from "../../../img/logo/logo-header.svg";
+import { ReactComponent as ReactLogo } from "../../img/logo/logo-header.svg";
 import Title from "../../components/common-components/title/Title";
 import './footer.css'
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Icon from "../../components/common-components/icon/Icon";
-import { ReactComponent as ReactLogo } from "../../../img/logo/logo-header.svg";
+import { ReactComponent as ReactLogo } from "../../img/logo/logo-header.svg";
 import "./header.css";
 
 const Header = () => {

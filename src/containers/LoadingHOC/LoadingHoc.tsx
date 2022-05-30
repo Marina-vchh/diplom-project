@@ -9,7 +9,14 @@ const isEmpty = (prop: any) => (
 );
 
 interface WithLoadingProps {
-    data: any | undefined | null;
+    data: IResult[];
+}
+
+interface IResult {
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
 }
 
 export const LoadingHOC = (loadingProp: string) => <P extends Record<string, any>>(WrappedComponent: React.ComponentType<P>) => {

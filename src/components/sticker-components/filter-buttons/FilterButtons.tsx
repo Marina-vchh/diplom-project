@@ -17,7 +17,7 @@ const FilterButtons = ({ buttons, className, activeFilter, filterChange }: IFilt
                   <button 
                      key={id} 
                      className={id === activeFilter ? "filter-button active" : 'filter-button'}
-                     onClick={ () => filterChange(id) }> {value}
+                     onClick={() => filterChange(id)}> {value}
                   </button>
                   )
                )

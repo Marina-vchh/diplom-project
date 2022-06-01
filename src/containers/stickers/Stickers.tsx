@@ -63,14 +63,12 @@ const Stickers = () => {
      }
    };
 
-   const sortStickers = useCallback((data: IStickers[], prop: keyof IStickers, dir: boolean = false) => {
+   const sortStickers = (data: IStickers[], prop: keyof IStickers, dir: boolean = false) => {
       let result = data.sort(function(a, b): any{
-         if((dir === false) ? a[prop] < b[prop] : a[prop] > b[prop]) return -1;
+         if((dir) ? a[prop] < b[prop] : a[prop] > b[prop]) return -1;
       });
       return result;
-   }, [stickers, Object.keys(stickers), false]);
-
-   const sortedStickers = useMemo(() => sortStickers(stickers, Object.keys(stickers), false), [stickers, sortStickers])
+   };
 
    return(
       <div className="stickers-field">

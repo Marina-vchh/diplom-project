@@ -8,7 +8,7 @@ interface IButton {
 };
 
 const SubmitButton = ({ text, disabled, onClick }: IButton) => {
-   const onClickAction = ( e: React.MouseEvent<HTMLButtonElement> ) => {
+   const onClickAction = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (disabled) {
         e.preventDefault();
       } else {
@@ -19,7 +19,7 @@ const SubmitButton = ({ text, disabled, onClick }: IButton) => {
       <button 
          disabled={disabled}
          className="button filled-background submit"
-         onClick={ onClickAction }>
+         onClick={onClickAction}>
             {text}
       </button>
    )

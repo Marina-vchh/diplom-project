@@ -27,7 +27,7 @@ const Select = ({ classNameSelect, classNameArrow, handleSelectActive, sortStick
                  onClick={() => sortStickers(STICKERS, price, false)}>Price, low to high
                </div>
                <div className="select__item" 
-                 onClick={() => sortStickers(STICKERS, price, true ) }>Price, high to low
+                 onClick={() => sortStickers(STICKERS, price, true)}>Price, high to low
                </div>
 	         </div>
          </div>

@@ -8,7 +8,7 @@ interface ITitle {
 
 const Title = ({ text, className }: ITitle) => {
    return (
-      <h2 className={className}> {text} </h2>
+      <h2 className={className}>{text}</h2>
    );
 };
 

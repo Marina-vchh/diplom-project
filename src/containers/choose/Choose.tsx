@@ -29,7 +29,7 @@ const StickersChoose = ({ data : { data } }: IChooseStickers) => {
       [dispatch]
    );
 
-  const chooseItem = [...stickers].filter((item) => item.id === data.id);
+  const chooseItem = stickers.filter((item) => item.id === data.id);
 
    return (
       <div>

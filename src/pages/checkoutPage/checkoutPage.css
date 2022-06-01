@@ -1,0 +1,16 @@
+.checkout-page-wrapper {
+   display: flex;
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.title-checkout {
+   display: none;
+}
+
+@media(max-width: 762px) {
+   .checkout-page-wrapper {
+      display: block;
+   }
+}

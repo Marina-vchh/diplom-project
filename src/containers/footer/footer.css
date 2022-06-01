@@ -1,0 +1,19 @@
+.footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 100px;
+   background-color: #EBEBEB;
+}
+
+@media(max-width: 992px) {
+   .footer  {
+      padding: 20px 50px;
+   }
+}
+
+@media(max-width: 767px) {
+   .footer {
+      padding: 20px;
+	}
+}

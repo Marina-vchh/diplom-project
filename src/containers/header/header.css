@@ -1,0 +1,52 @@
+.header {
+   padding: 40px 100px;
+   margin-bottom: 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header-icon-button {
+   width: 30px;
+   height: 30px;
+   border: none;
+   background-repeat: no-repeat;
+   background-color: transparent;
+   transition: all .3s linear;
+}
+
+.header-icon-loop {
+   background-image: url(../../img//header-icons//header-loop.svg);
+}
+
+.header-icon-loop:hover {
+   background-image: url(../../img/header-icons//header-loop-hover.svg);
+}
+
+.header-icon-heart {
+   background-image: url(../../img//header-icons//header-heart.svg);
+}
+
+.header-icon-heart:hover {
+   background-image: url(../../img/header-icons//header-heart-hover.svg);
+}
+
+.header-icon-store {
+   background-image: url(../../img//header-icons//header-store.svg);
+}
+
+.header-icon-store:hover {
+   background-image: url(../../img/header-icons//header-store-hover.svg);
+}
+
+@media(max-width: 992px) {
+   .header  {
+      padding: 20px 50px;
+   }
+}
+
+@media(max-width: 767px) {
+   .header {
+      padding: 20px;
+	}
+}

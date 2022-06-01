@@ -1,0 +1,29 @@
+.background {
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+ 
+.background-sticker {
+   padding: 0 16px 150px;
+   background-image: url(../../img//background//background-first-page.jpg);
+}
+
+.background-choose {
+   padding: 0 16px 100px;
+   background-image: url(../../img//background//background-second-page.jpg);
+}
+
+.background-wishlist {
+   padding: 0 16px 100px;
+   background-image: url(../../img//background//background-wishlist.jpg);
+}
+
+.background-cart {
+   padding: 0 16px 100px;
+   background-image: url(../../img/background/background-cart.jpg);
+}
+
+.background-checkout {
+   padding: 0 16px 100px;
+   background-image: url(../../img/background/background-checkout.jpg);
+}

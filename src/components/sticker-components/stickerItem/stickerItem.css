@@ -1,0 +1,63 @@
+.sticker-item {
+   position: relative;
+   padding: 20px;
+   margin: 0 auto;
+   max-width: 288px;
+   width: 100%;
+   cursor: pointer;
+   transition:  .3s all linear;
+   background-color: transparent;
+}
+
+.sticker-item-img {
+   display: block;
+   margin: 0 auto;
+}
+
+.hidden{
+   display: none;
+}
+
+.sticker-item__info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 169px;
+   width: 100%;
+   margin-left: auto;
+   margin-bottom: 20px;
+}
+
+.sticker-item__name {
+   font-size: 20px;
+   font-weight: 600;
+   color: #143550;
+}
+
+.sticker-item__price {
+   font-size: 24px;
+   font-weight: 600;
+   color: #DB2C6F;
+}
+
+.button-like {
+   display: block;
+   width: 24px;
+   height: 24px;
+   padding: 10px;
+   border: none;
+   position: absolute;
+   right: 40px;
+   top: 40px;
+   background-image: url("../../../img//heart//heart.svg");
+   background-color: transparent;
+   transition: all .3s linear;
+}
+
+.button-item:hover {
+   background-image: url("../../../img//heart/heart-hover.svg");
+}
+
+.button-active {
+   background-image: url("../../../img//heart//heart-active.svg");
+}

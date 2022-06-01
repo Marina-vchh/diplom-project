@@ -1,0 +1,41 @@
+.order-block {
+   max-width: 250px;
+   width: 100%;
+   padding: 0 100px;
+   margin-left: auto;
+   margin-bottom: 40px;
+}
+
+.title-cart {
+   text-align: center;
+   width: 100%;
+   padding: 10px 28px;
+   border-bottom: 1px solid rgb(169, 169, 169);
+}
+
+.title-cart-without__border {
+   text-align: center;
+   width: 100%;
+   padding: 0 28px;
+   text-align: left;
+}
+
+.order-block__text {
+   padding: 10px 28px;
+   font-size: 18px;
+   color: #143550;
+   text-align: left;
+}
+
+@media(max-width: 992px) {
+   .order-block {
+      padding: 0 50px;
+   }
+
+@media(max-width: 762px) {
+   .order-block {
+         padding: 0 20px;
+         margin: 0 auto;
+	   }
+   }
+}

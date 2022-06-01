@@ -1,0 +1,27 @@
+.related-stickers-wrapper {
+   padding: 0 100px;
+}
+
+.sticker-item-list__related {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
+}
+
+.related-button {
+   margin: 0 auto;
+}
+
+@media(max-width: 992px) {
+   .sticker-item-list__related {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+	}
+
+@media(max-width: 762px) {
+   .sticker-item-list__related {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+	   }
+   }
+}

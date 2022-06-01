@@ -1,0 +1,56 @@
+.button {
+   display: block;
+   padding: 10px 15px;
+   font-size: 18px;
+   font-weight: 400;
+   border: 1px solid #143550;
+   border-radius: 5px;
+   background-color: none;
+   transition: all .3s linear;
+}
+
+.transparent-background {
+   background-color: rgb(255, 255, 255);
+   color: #143550;
+}
+
+.transparent-background:hover {
+   background-color: #143550;
+   color: #fff;
+}
+
+.filled-background {
+   background-color: #143550;
+   color: #fff;
+}
+
+.filled-background:hover {
+   background-color: rgb(255, 255, 255);
+   color: #143550;
+}
+
+.sticker-item-button {
+   display: block;
+   margin: 0 auto;
+}
+
+.sticker-item-button:hover {
+   background-color: #1d4e77;
+   color: #fff;
+}
+
+.submit {
+   width: 100%;
+}
+
+@media(max-width: 992px) {
+   .button-table {
+      font-size: 16px;
+   }
+}
+
+@media(max-width: 762px) {
+   .button-table {
+      padding: 5px;
+	}
+}
